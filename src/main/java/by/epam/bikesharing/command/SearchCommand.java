@@ -1,0 +1,18 @@
+package by.epam.bikesharing.command;
+
+import by.epam.bikesharing.dao.BikeDao;
+import by.epam.bikesharing.resource.ConfigurationManager;
+
+import javax.servlet.http.HttpServletRequest;
+
+public class SearchCommand implements ActionCommand {
+
+    @Override
+    public String execute(HttpServletRequest request) {
+        String page;
+        BikeDao bikeDao = new BikeDao();
+        request.setAttribute("bikes", bikeDao.findAll());
+        page = ConfigurationManager.getProperty("path.page.bikes");
+        return page;
+    }
+}
