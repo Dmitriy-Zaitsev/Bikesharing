@@ -1,7 +1,11 @@
 package by.epam.bikesharing.command.profile;
 
 import by.epam.bikesharing.command.ActionCommand;
+import by.epam.bikesharing.constant.ParameterName;
+import by.epam.bikesharing.constant.ParameterValue;
+import by.epam.bikesharing.constant.ServiceConstant;
 import by.epam.bikesharing.entity.User;
+import by.epam.bikesharing.resource.MessageManager;
 import by.epam.bikesharing.service.ProfileLogic;
 import by.epam.bikesharing.resource.ConfigurationManager;
 
@@ -9,32 +13,36 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 public class SaveProfileCommand implements ActionCommand {
-
+    private static final String OLD_PASSWORD = "old_password";
+    private static final String NEW_PASSWORD = "new_password";
+    private static final String REPEAT_PASSWORD = "repeat_password";
+    private static final String UPDATE_IMAGE_FLAG = "update_image";
+    
     @Override
     public String execute(HttpServletRequest request) {
         HttpSession session = request.getSession();
-        User user = (User) session.getAttribute("user");
+        User user = (User) session.getAttribute(ParameterName.USER);
         ProfileLogic logic = setupLogic(request, user);
         String message = logic.updateProfile();
-        if (ProfileLogic.SUCCESS_UPDATE.equals(message)) {
+        if (ServiceConstant.UPDATE_SUCCESS.equals(message)) {
             user = logic.getNewUser();
-            session.setAttribute("user", user);
+            session.setAttribute(ParameterName.USER, user);
         } else {
-            request.setAttribute("message", message);
+            request.setAttribute(ParameterName.MESSAGE, MessageManager.getProperty(message));
         }
-        request.setAttribute("profile", user);
+        request.setAttribute(ParameterName.PROFILE_USER, user);
         return ConfigurationManager.getProperty("path.page.profile");
     }
 
     private ProfileLogic setupLogic(HttpServletRequest request, User user) {
         ProfileLogic logic = new ProfileLogic(user);
-        logic.setLogin(request.getParameter("login"));
-        logic.setEmail(request.getParameter("email"));
-        logic.setOldPassword(request.getParameter("old_password"));
-        logic.setNewPassword(request.getParameter("new_password"));
-        logic.setRepeatPassword(request.getParameter("repeat_password"));
-        if ("true".equals(request.getParameter("update_image"))) {
-            logic.setImage(request.getParameter("image"));
+        logic.setLogin(request.getParameter(ParameterName.LOGIN));
+        logic.setEmail(request.getParameter(ParameterName.EMAIL));
+        logic.setOldPassword(request.getParameter(OLD_PASSWORD));
+        logic.setNewPassword(request.getParameter(NEW_PASSWORD));
+        logic.setRepeatPassword(request.getParameter(REPEAT_PASSWORD));
+        if (ParameterValue.TRUE.equals(request.getParameter(UPDATE_IMAGE_FLAG))) {
+            logic.setImage(request.getParameter(ParameterName.IMAGE));
         }
         return logic;
     }

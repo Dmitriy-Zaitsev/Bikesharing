@@ -1,24 +1,24 @@
 package by.epam.bikesharing.service;
 
+import by.epam.bikesharing.constant.ServiceConstant;
 import by.epam.bikesharing.dao.UserDao;
 import by.epam.bikesharing.entity.User;
-import by.epam.bikesharing.resource.MessageManager;
 import by.epam.bikesharing.validation.EmailValidatiom;
 import by.epam.bikesharing.validation.LoginValidation;
 import by.epam.bikesharing.validation.PasswordValidation;
 
+import static by.epam.bikesharing.constant.ServiceConstant.UPDATE_SUCCESS;
+
 public class ProfileLogic {
-    private static final int MAX_FILE_SIZE = 350000;
-    private static final String INVALID_EMAIL = MessageManager.getProperty("message.invalid_email");
-    private static final String INVALID_IMAGE = MessageManager.getProperty("message.invalid_image");
-    private static final String INVALID_LOGIN = MessageManager.getProperty("message.invalid_login");
-    private static final String INVALID_PASSWORD = MessageManager.getProperty("message.invalid_password");
-    private static final String LOGIN_IN_USE = MessageManager.getProperty("message.login_in_use");
-    private static final String EMAIL_IN_USE = MessageManager.getProperty("message.email_in_use");
-    private static final String SAME_PASSWORDS = MessageManager.getProperty("message.same_password");
-    private static final String CONFIRM_PASSWORDS = MessageManager.getProperty("message.confirm_password");
-    private static final String OLD_PASSWORD_WRONG = MessageManager.getProperty("message.wrong_password");
-    public static final String SUCCESS_UPDATE = "OK";
+    private static final String INVALID_EMAIL = "message.invalid_email";
+    private static final String INVALID_IMAGE = "message.invalid_image";
+    private static final String INVALID_LOGIN = "message.invalid_login";
+    private static final String INVALID_PASSWORD = "message.invalid_password";
+    private static final String LOGIN_IN_USE = "message.login_in_use";
+    private static final String EMAIL_IN_USE = "message.email_in_use";
+    private static final String SAME_PASSWORDS = "message.same_password";
+    private static final String CONFIRM_PASSWORDS = "message.confirm_password";
+    private static final String OLD_PASSWORD_WRONG = "message.wrong_password";
     private User oldUser;
     private User newUser;
     private String login;
@@ -33,14 +33,14 @@ public class ProfileLogic {
     }
 
     public String updateProfile() {
-        String result = SUCCESS_UPDATE;
+        String result = UPDATE_SUCCESS;
         newUser = new User(oldUser);
         if (!oldUser.getLogin().equals(login) && !login.isBlank()) {
-            if (!SUCCESS_UPDATE.equals(result = updateLogin()))
+            if (!UPDATE_SUCCESS.equals(result = updateLogin()))
                 return result;
         }
         if (!oldUser.getEmail().equals(email) && !email.isBlank()) {
-            if (!SUCCESS_UPDATE.equals(result = updateEmail()))
+            if (!UPDATE_SUCCESS.equals(result = updateEmail()))
                 return result;
         }
         if (image != null) {
@@ -48,7 +48,7 @@ public class ProfileLogic {
                 return INVALID_IMAGE;
         }
         if (!newPassword.isBlank()) {
-            if (!SUCCESS_UPDATE.equals(result = updatePassword()))
+            if (!UPDATE_SUCCESS.equals(result = updatePassword()))
                 return result;
         }
         UserDao dao = new UserDao();
@@ -66,7 +66,7 @@ public class ProfileLogic {
             return LOGIN_IN_USE;
         }
         newUser.setLogin(login);
-        return SUCCESS_UPDATE;
+        return UPDATE_SUCCESS;
     }
 
     private String updateEmail() {
@@ -77,11 +77,11 @@ public class ProfileLogic {
             return EMAIL_IN_USE;
         }
         newUser.setEmail(email);
-        return SUCCESS_UPDATE;
+        return UPDATE_SUCCESS;
     }
 
     private boolean updateImage() {
-        if (image.length() <= MAX_FILE_SIZE) {
+        if (image.length() <= ServiceConstant.MAX_IMAGE_SIZE) {
             newUser.setImage(image);
             return true;
         }
@@ -102,7 +102,7 @@ public class ProfileLogic {
             return CONFIRM_PASSWORDS;
         }
         newUser.setPasswordHash(new PasswordHash(newPassword));
-        return SUCCESS_UPDATE;
+        return UPDATE_SUCCESS;
     }
 
     public User getNewUser() {

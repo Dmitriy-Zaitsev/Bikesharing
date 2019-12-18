@@ -1,9 +1,10 @@
 package by.epam.bikesharing;
 
 import by.epam.bikesharing.command.ActionCommand;
-import by.epam.bikesharing.command.factory.ActionFactory;
+import by.epam.bikesharing.command.ActionFactory;
 import by.epam.bikesharing.resource.ConfigurationManager;
 import by.epam.bikesharing.resource.MessageManager;
+import by.epam.bikesharing.resource.StringManager;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -13,8 +14,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+import static org.apache.logging.log4j.web.WebLoggerContextUtils.getServletContext;
+
 @WebServlet("/controller")
 public class Controller extends HttpServlet {
+
+    public void init() throws ServletException {
+        getServletContext().setAttribute("stringManager", StringManager.getInstance());
+    }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -29,10 +36,9 @@ public class Controller extends HttpServlet {
     private void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         String page;
-        ActionFactory actionFactory = new ActionFactory();
         SessionRequestContent content = new SessionRequestContent();
         content.extractValues(request);
-        ActionCommand command = actionFactory.defineCommand(content);
+        ActionCommand command = ActionFactory.defineCommand(content);
         page = command.execute(request);
         if (page != null) {
             RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(page);

@@ -18,6 +18,9 @@
         top: 0;
         opacity: 0;
     }
+    .language-icon {
+        height: 24px;
+    }
 </style>
 <body>
 <div class="container">
@@ -27,11 +30,11 @@
             <div class="text-center">
                 <div class="form-group">
                     <c:choose>
-                        <c:when test="${empty requestScope.profile.image}">
+                        <c:when test="${empty requestScope.profile_user.image}">
                             <img id="profile_image" src="${request.contextPath}/profile.jpg" class="card-img" alt="avatar">
                         </c:when>
                         <c:otherwise>
-                            <img id="profile_image" src="${requestScope.profile.image}" class="card-img" alt="avatar">
+                            <img id="profile_image" src="${requestScope.profile_user.image}" class="card-img" alt="avatar">
                         </c:otherwise>
                     </c:choose>
                 </div>
@@ -41,10 +44,10 @@
                 </div>
                 <form name="addForm" method="post" action="${request.contextPath}/controller">
                     <input type="hidden" name="command" value="rents_page" />
-                    <input type="hidden" name="id" value="${requestScope.get("profile").id}" />
+                    <input type="hidden" name="id" value="${requestScope.get("profile_user").id}" />
                     <input type="submit" class="btn btn-outline-primary btn-block" value="${stringManager.get("rents")}">
                 </form>
-                <c:if test = "${sessionScope.user.id == requestScope.profile.id}">
+                <c:if test = "${sessionScope.user.id == requestScope.profile_user.id}">
                     <form name="addForm" method="post" action="${request.contextPath}/controller">
                         <input type="hidden" name="command" value="cards_page" />
                         <input type="submit" class="btn btn-outline-primary btn-block" value="${stringManager.get("cards")}">
@@ -61,15 +64,24 @@
                 <input type="hidden" name="command" value="save_profile" />
                 <input type="hidden" name="image" value="" />
                 <div class="form-group">
+                    <label class="col-lg-3 control-label">Language:</label>
+                    <a class="nav-link language-icon" href="${request.contextPath}/controller?command=localization&locale=us">
+                        <img class="language-icon" src="${request.contextPath}/united-kingdom.svg" alt="English">
+                    </a>
+                    <a class="nav-link language-icon" href="${request.contextPath}/controller?command=localization&locale=ru">
+                        <img class="language-icon" src="${request.contextPath}/russia.svg" alt="Русский">
+                    </a>
+                </div>
+                <div class="form-group">
                     <label class="col-lg-3 control-label" for="login">${stringManager.get("login")}:</label>
                     <div class="col-lg-8">
-                        <input name="login" id="login" class="form-control" type="text" value="${requestScope.profile.login}">
+                        <input name="login" id="login" class="form-control" type="text" value="${requestScope.profile_user.login}">
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-lg-3 control-label" for="email">${stringManager.get("email")}:</label>
                     <div class="col-lg-8">
-                        <input name="email" id="email" class="form-control" type="text" value="${requestScope.profile.email}" autocomplete="new-password">
+                        <input name="email" id="email" class="form-control" type="text" value="${requestScope.profile_user.email}" autocomplete="new-password">
                     </div>
                 </div>
                 <div class="form-group">

@@ -1,5 +1,6 @@
-package by.epam.bikesharing.command;
+package by.epam.bikesharing.command.pages;
 
+import by.epam.bikesharing.command.ActionCommand;
 import by.epam.bikesharing.resource.ConfigurationManager;
 
 import javax.servlet.http.HttpServletRequest;

@@ -1,5 +1,6 @@
 package by.epam.bikesharing.service.rent;
 
+import by.epam.bikesharing.constant.ServiceConstant;
 import by.epam.bikesharing.dao.*;
 import by.epam.bikesharing.entity.Bike;
 import by.epam.bikesharing.entity.Rent;
@@ -11,7 +12,6 @@ import java.math.RoundingMode;
 import java.sql.Timestamp;
 
 public class RentFinishedTransaction {
-    private static final BigDecimal MS_IN_HOUR = new BigDecimal("3600000");
     private User user;
     private Bike bike;
     private Rent rent;
@@ -45,7 +45,7 @@ public class RentFinishedTransaction {
 
     private BigDecimal calculateRideCost(BigDecimal hourCost) {
         BigDecimal rideTime = new BigDecimal(rent.getEnd().getTime() - rent.getStart().getTime());
-        return rideTime.multiply(hourCost).divide(MS_IN_HOUR, 2, RoundingMode.HALF_UP);
+        return rideTime.multiply(hourCost).divide(ServiceConstant.MILLIS_IN_HOUR_COUNT, 2, RoundingMode.HALF_UP);
     }
 
     private void setMoneyProperties(BigDecimal rideCost) {

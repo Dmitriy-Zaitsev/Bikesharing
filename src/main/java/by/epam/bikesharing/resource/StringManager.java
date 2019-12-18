@@ -4,23 +4,26 @@ import java.nio.charset.StandardCharsets;
 import java.util.Locale;
 import java.util.ResourceBundle;
 
-public enum StringManager {
-    INSTANCE;
-    //RU, US;
+public class StringManager {
+    //INSTANCE;
+    private static final String RU = "ru";
+    private static final String US = "us";
+    private static final ResourceBundle resourceBundleDefault = ResourceBundle.getBundle("strings");
+    private static final ResourceBundle resourceBundleRu = ResourceBundle.getBundle("strings", new Locale("ru", "RU"));
+    private static final ResourceBundle resourceBundleUs = ResourceBundle.getBundle("strings", new Locale("us", "US"));
+    private static StringManager INSTANCE = new StringManager();
 
-    // private static ResourceBundle resourceBundleRu = ResourceBundle.getBundle("strings", new Locale("ru", "RU"));
-    //private static ResourceBundle resourceBundleUs = ResourceBundle.getBundle("strings", new Locale("us", "US"));
-    private static ResourceBundle resourceBundle = ResourceBundle.getBundle("strings");
+    private StringManager() {}
 
-    public String get(String key) {
-        String val = resourceBundle.getString(key);
-        return new String(val.getBytes(StandardCharsets.UTF_8), StandardCharsets.UTF_8);
+    public static StringManager getInstance() {
+        return INSTANCE;
     }
 
-    public void setLocale(String language) {
-        String country = language.toUpperCase();
-        Locale locale = new Locale(language, country);
-        resourceBundle = ResourceBundle.getBundle("strings", locale);
-        System.out.println();
+    public String get(String key, String locale) {
+        switch (locale) {
+            case RU: return resourceBundleRu.getString(key);
+            case US: return resourceBundleUs.getString(key);
+            default: return resourceBundleDefault.getString(key);
+        }
     }
 }

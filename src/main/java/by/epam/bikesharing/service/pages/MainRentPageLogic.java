@@ -1,5 +1,6 @@
-package by.epam.bikesharing.service.rent;
+package by.epam.bikesharing.service.pages;
 
+import by.epam.bikesharing.constant.ParameterName;
 import by.epam.bikesharing.dao.BikeDao;
 import by.epam.bikesharing.dao.RentDao;
 import by.epam.bikesharing.dao.SpotDao;
@@ -18,9 +19,9 @@ public class MainRentPageLogic {
         String page;
         if (user.getBikeId() == 0) {
             List<Spot> spots = (new SpotDao()).findAll();
-            request.setAttribute("spots", spots);
+            request.setAttribute(ParameterName.SPOTS, spots);
             List<Bike> bikes = (new BikeDao()).findAvailable();
-            request.setAttribute("bikes", bikes);
+            request.setAttribute(ParameterName.BIKES, bikes);
             page = ConfigurationManager.getProperty("path.page.main");
         } else {
             request.setAttribute("start", getStartTime(user));

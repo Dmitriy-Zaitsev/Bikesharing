@@ -1,4 +1,4 @@
-package by.epam.bikesharing.service.rent;
+package by.epam.bikesharing.service.pages;
 
 import by.epam.bikesharing.dao.RentDao;
 import by.epam.bikesharing.entity.Rent;

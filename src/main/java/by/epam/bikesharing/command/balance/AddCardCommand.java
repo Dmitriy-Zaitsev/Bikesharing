@@ -1,34 +1,41 @@
 package by.epam.bikesharing.command.balance;
 
 import by.epam.bikesharing.command.ActionCommand;
-import by.epam.bikesharing.dao.CardDao;
+import by.epam.bikesharing.constant.ParameterName;
+import by.epam.bikesharing.constant.ServiceConstant;
 import by.epam.bikesharing.entity.Card;
 import by.epam.bikesharing.entity.User;
-import by.epam.bikesharing.service.PasswordHash;
+import by.epam.bikesharing.resource.MessageManager;
+import by.epam.bikesharing.service.CardLogic;
 import by.epam.bikesharing.resource.ConfigurationManager;
+import by.epam.bikesharing.service.pages.PagesLogic;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import java.util.List;
 
 public class AddCardCommand implements ActionCommand {
 
     @Override
     public String execute(HttpServletRequest request) {
         String page;
-        HttpSession session = request.getSession(false);
-        User user = (User) session.getAttribute("user");
-        Card card = new Card();
-        card.setUserId(user.getId());
-        card.setNumber(request.getParameter("number"));
-        card.setFirstName(request.getParameter("firstName"));
-        card.setLastName(request.getParameter("lastName"));
-        card.setMonth(Integer.parseInt(request.getParameter("month")));
-        card.setYear(Integer.parseInt(request.getParameter("year")));
-        card.setCvv(new PasswordHash(request.getParameter("cvv")));
-        CardDao cardDao = new CardDao();
-        cardDao.create(card);
-        cardDao.closeConnection();
-        page = ConfigurationManager.getProperty("path.page.main");
+        HttpSession session = request.getSession();
+        User user = (User) session.getAttribute(ParameterName.USER);
+        String number = request.getParameter(ParameterName.NUMBER);
+        String firstName = request.getParameter(ParameterName.FIRST_NAME);
+        String lastName = request.getParameter(ParameterName.LAST_NAME);
+        String month = request.getParameter(ParameterName.MONTH);
+        String year = request.getParameter(ParameterName.YEAR);
+        String cvv = request.getParameter(ParameterName.CVV);
+        String addCardResult = new CardLogic().addCard(user.getId(), number, firstName, lastName, month, year, cvv);
+        if (ServiceConstant.UPDATE_SUCCESS.equals(addCardResult)) {
+            List<Card> cards = PagesLogic.getUserCards(user.getId());
+            request.setAttribute(ParameterName.CARDS, cards);
+            page = ConfigurationManager.getProperty("path.page.cards");
+        } else {
+            request.setAttribute(ParameterName.MESSAGE, MessageManager.getProperty(addCardResult));
+            page = ConfigurationManager.getProperty("path.page.add_card");
+        }
         return page;
     }
 }

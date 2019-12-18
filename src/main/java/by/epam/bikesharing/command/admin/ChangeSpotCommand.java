@@ -1,6 +1,7 @@
 package by.epam.bikesharing.command.admin;
 
 import by.epam.bikesharing.command.ActionCommand;
+import by.epam.bikesharing.constant.ParameterName;
 import by.epam.bikesharing.service.BikeLogic;
 import by.epam.bikesharing.service.pages.PagesLogic;
 import by.epam.bikesharing.resource.ConfigurationManager;
@@ -11,10 +12,10 @@ public class ChangeSpotCommand implements ActionCommand {
 
     @Override
     public String execute(HttpServletRequest request) {
-        String bikeId = request.getParameter("id");
-        String spotId = request.getParameter("spotId");
+        String bikeId = request.getParameter(ParameterName.BIKE_ID);
+        String spotId = request.getParameter(ParameterName.SPOT_ID);
         new BikeLogic().editBikeSpot(Long.parseLong(bikeId), spotId);
-        request.setAttribute("bikes", new PagesLogic().searchBikes());
+        request.setAttribute(ParameterName.BIKES, new PagesLogic().searchBikes());
         return ConfigurationManager.getProperty("path.page.bikes");
     }
 }

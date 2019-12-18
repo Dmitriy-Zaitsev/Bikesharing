@@ -52,15 +52,15 @@
                             <td id="number">${bikes[loop.index].serialNumber}</td>
                             <td id="model_name">${bikes[loop.index].model.name}</td>
                             <td id="cost">$<fmt:formatNumber value = "${bikes[loop.index].model.cost}" maxFractionDigits = "2"/>/${stringManager.get("hour")}</td>
-                            <td id="spot_name">${spotNames[loop.index]}</td>
-                            <c:set var="profileName" scope="request" value="${userNames[loop.index]}"/>
+                            <td id="spot_name">${spot_names[loop.index]}</td>
+                            <c:set var="profile_name" scope="request" value="${user_names[loop.index]}"/>
                             <td id="user_name">
                                 <c:choose>
-                                    <c:when test="${profileName == 'NULL'}">
+                                    <c:when test="${profile_name == 'NULL'}">
                                         NULL
                                     </c:when>
                                     <c:otherwise>
-                                        <a href="${request.contextPath}/controller?command=profile&profile_name=${profileName}">${profileName}</a>
+                                        <a href="${request.contextPath}/controller?command=profile&profile_name=${profile_name}">${profile_name}</a>
                                     </c:otherwise>
                                 </c:choose>
                             </td>
@@ -77,16 +77,16 @@
             <form name="addForm" method="post" action="${request.contextPath}/controller">
                 <input type="hidden" name="command" value="add_bike">
                 <div class="form-group" style="display: none">
-                    <label for="idInput">ID</label>
-                    <input name="id" type="text" class="form-control" id="idInput">
+                    <label for="id_input">ID</label>
+                    <input name="bike_id" type="text" class="form-control" id="id_input">
                 </div>
                 <div class="form-group">
                     <label for="numberInput">${stringManager.get("serial_number")}</label>
-                    <input name="serialNumber" type="text" class="form-control" id="numberInput">
+                    <input name="serial_number" type="text" class="form-control" id="numberInput">
                 </div>
                 <div class="form-group">
                     <label>${stringManager.get("model")}</label>
-                    <select name="modelSelect" id="model_select" class="form-control">
+                    <select name="select_model" id="model_select" class="form-control">
                         <c:forEach items="${models}" var="model">
                             <option name="${model.id}">${model.name}</option>
                         </c:forEach>
@@ -94,7 +94,7 @@
                 </div>
                 <div class="form-group">
                     <label>${stringManager.get("spot")}</label>
-                    <select name="spotSelect" id="spot_select" class="form-control">
+                    <select name="select_spot" id="spot_select" class="form-control">
                         <option>NULL</option>
                         <c:forEach items="${spots}" var="spot">
                             <option>${spot.address}</option>
@@ -107,18 +107,18 @@
         </div>
     </div>
 </div>
-<nav class="container">
-    <ul class="pagination">
-        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-        <li class="page-item"><a class="page-link" href="#">1</a></li>
-        <li class="page-item"><a class="page-link" href="#">2</a></li>
-        <li class="page-item"><a class="page-link" href="#">3</a></li>
-        <li class="page-item"><a class="page-link" href="#">Next</a></li>
-    </ul>
-</nav>
+<%--<nav class="container">--%>
+<%--    <ul class="pagination">--%>
+<%--        <li class="page-item"><a class="page-link" href="#">Previous</a></li>--%>
+<%--        <li class="page-item"><a class="page-link" href="#">1</a></li>--%>
+<%--        <li class="page-item"><a class="page-link" href="#">2</a></li>--%>
+<%--        <li class="page-item"><a class="page-link" href="#">3</a></li>--%>
+<%--        <li class="page-item"><a class="page-link" href="#">Next</a></li>--%>
+<%--    </ul>--%>
+<%--</nav>--%>
 <script>
     function setForm(elmnt) {
-        document.getElementById("idInput").value = elmnt.querySelector("#id").innerHTML;
+        document.getElementById("id_input").value = elmnt.querySelector("#id").innerHTML;
         document.getElementById("numberInput").value = elmnt.querySelector("#number").innerHTML;
         document.getElementById("spot_select").value = elmnt.querySelector("#spot_name").innerHTML;
         document.getElementById("model_select").value = elmnt.querySelector("#model_name").innerHTML;

@@ -14,6 +14,7 @@ public class User {
     private BigDecimal balance;
     private PasswordHash passwordHash;
     private String image;
+    private String locale;
 
     public User(){}
 
@@ -26,6 +27,7 @@ public class User {
         this.balance = copy.balance;
         this.passwordHash = copy.passwordHash;
         this.image = copy.image;
+        this.locale = copy.locale;
     }
 
     public long getId() {
@@ -92,6 +94,14 @@ public class User {
         this.image = image;
     }
 
+    public String getLocale() {
+        return locale;
+    }
+
+    public void setLocale(String locale) {
+        this.locale = locale;
+    }
+
     @Override
     public String toString() {
         return new StringJoiner(", ", User.class.getSimpleName() + "[", "]")
@@ -101,6 +111,7 @@ public class User {
                 .add("login='" + login + "'")
                 .add("role='" + role + "'")
                 .add("balance=" + balance)
+                .add("locale=" + locale)
                 .toString();
     }
 }

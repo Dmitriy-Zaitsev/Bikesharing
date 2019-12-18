@@ -1,10 +1,13 @@
 package by.epam.bikesharing.command.admin;
 
 import by.epam.bikesharing.command.ActionCommand;
+import by.epam.bikesharing.constant.ParameterName;
+import by.epam.bikesharing.constant.ParameterValue;
 import by.epam.bikesharing.entity.Bike;
 import by.epam.bikesharing.entity.BikeModel;
 import by.epam.bikesharing.entity.Spot;
 import by.epam.bikesharing.service.BikeLogic;
+import by.epam.bikesharing.service.pages.BikesPageLogic;
 import by.epam.bikesharing.service.pages.PagesLogic;
 import by.epam.bikesharing.resource.ConfigurationManager;
 
@@ -15,28 +18,17 @@ public class AddBikeCommand implements ActionCommand {
 
     @Override
     public String execute(HttpServletRequest request) {
-        String spot = request.getParameter("spotSelect");
-        String action = request.getParameter("action");
-        if ("add".equals(action)) {
-            String serialNumber = request.getParameter("serialNumber");
-            String model = request.getParameter("modelSelect");
-            //String modelId = request.getParameter("model_id");
+        String spot = request.getParameter(ParameterName.SELECT_SPOT);
+        String action = request.getParameter(ParameterName.ACTION);
+        if (ParameterValue.ACTION_ADD.equals(action)) {
+            String serialNumber = request.getParameter(ParameterName.SERIAL_NUMBER);
+            String model = request.getParameter(ParameterName.SELECT_MODEL);
             new BikeLogic().addBike(serialNumber, model, spot);
-        } else if ("edit".equals(action)) {
-            String bikeId = request.getParameter("id");
+        } else if (ParameterValue.ACTION_EDIT.equals(action)) {
+            String bikeId = request.getParameter(ParameterName.BIKE_ID);
             new BikeLogic().editBikeSpot(Long.parseLong(bikeId), spot);
         }
-        PagesLogic logic = new PagesLogic();
-        List<Bike> bikes = logic.searchBikes();
-        List<BikeModel> models = logic.searchModels();
-        List<Spot> spots = logic.searchSpots();
-        List<String> spotNames = logic.getSpotNames();
-        List<String> userNames = logic.getUserNames();
-        request.setAttribute("bikes", bikes);
-        request.setAttribute("models", models);
-        request.setAttribute("spots", spots);
-        request.setAttribute("spotNames", spotNames);
-        request.setAttribute("userNames", userNames);
+        new BikesPageLogic().handleBikesPageRequest(request);
         return ConfigurationManager.getProperty("path.page.bikes");
     }
 }

@@ -11,28 +11,28 @@
 </head>
 <body>
 <c:import url="/jsp/import/navbar.jsp"/>
-<div id="searchBar" class="container">
-    <div class="row">
-        <div class="dropdown" style="margin: 8px">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownManufacturer" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Model
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownManufacturer">
-                <a class="dropdown-item" href="#">Merida</a>
-                <a class="dropdown-item" href="#">Cube</a>
-                <a class="dropdown-item" href="#">Giant</a>
-            </div>
-        </div>
-        <input class="form-control" type="text" placeholder="Serial Number" aria-label="Search number" style="margin: 8px; width: 200px">
-        <input class="form-control" type="number" placeholder="Cost" aria-label="Search cost" style="margin: 8px; width: 200px">
-        <input class="form-control" type="text" placeholder="User" aria-label="Search user" style="margin: 8px; width: 200px">
-        <div class="form-group form-check" style="margin: 8px">
-            <input name="availability" type="checkbox" class="form-check-input" id="availabilitySearch">
-            <label class="form-check-label" for="availabilitySearch">Availability</label>
-        </div>
-        <a href="${request.contextPath}/controller?command=search" class="btn btn-primary" role="button" aria-pressed="true" style="margin: 8px">Search</a>
-    </div>
-</div>
+<%--<div id="searchBar" class="container">--%>
+<%--    <div class="row">--%>
+<%--        <div class="dropdown" style="margin: 8px">--%>
+<%--            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownManufacturer" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">--%>
+<%--                Model--%>
+<%--            </button>--%>
+<%--            <div class="dropdown-menu" aria-labelledby="dropdownManufacturer">--%>
+<%--                <a class="dropdown-item" href="#">Merida</a>--%>
+<%--                <a class="dropdown-item" href="#">Cube</a>--%>
+<%--                <a class="dropdown-item" href="#">Giant</a>--%>
+<%--            </div>--%>
+<%--        </div>--%>
+<%--        <input class="form-control" type="text" placeholder="Serial Number" aria-label="Search number" style="margin: 8px; width: 200px">--%>
+<%--        <input class="form-control" type="number" placeholder="Cost" aria-label="Search cost" style="margin: 8px; width: 200px">--%>
+<%--        <input class="form-control" type="text" placeholder="User" aria-label="Search user" style="margin: 8px; width: 200px">--%>
+<%--        <div class="form-group form-check" style="margin: 8px">--%>
+<%--            <input name="availability" type="checkbox" class="form-check-input" id="availabilitySearch">--%>
+<%--            <label class="form-check-label" for="availabilitySearch">Availability</label>--%>
+<%--        </div>--%>
+<%--        <a href="${request.contextPath}/controller?command=search" class="btn btn-primary" role="button" aria-pressed="true" style="margin: 8px">Search</a>--%>
+<%--    </div>--%>
+<%--</div>--%>
 <div id="table" class="container">
     <div class="row">
         <div class="col">
@@ -73,7 +73,7 @@
                 </div>
                 <div class="form-group">
                     <label for="imageInput">${stringManager.get("image_url")}</label>
-                    <input name="image_url" type="text" class="form-control" id="imageInput">
+                    <input name="image" type="text" class="form-control" id="imageInput">
                 </div>
                 <img id="bike_image" width="300">
                 <button type="submit" class="btn btn-primary btn-form" name="action" value="add">${stringManager.get("add_model")}</button>

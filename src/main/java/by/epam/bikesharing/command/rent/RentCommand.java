@@ -1,6 +1,7 @@
 package by.epam.bikesharing.command.rent;
 
 import by.epam.bikesharing.command.ActionCommand;
+import by.epam.bikesharing.constant.ParameterName;
 import by.epam.bikesharing.entity.User;
 import by.epam.bikesharing.exception.TransactionException;
 import by.epam.bikesharing.service.rent.RentStartedTransaction;
@@ -15,11 +16,11 @@ public class RentCommand implements ActionCommand {
     public String execute(HttpServletRequest request) {
         String page;
         HttpSession session = request.getSession();
-        User user = (User) session.getAttribute("user");
+        User user = (User) session.getAttribute(ParameterName.USER);
         long userId = user.getId();
-        long bikeId = Long.parseLong(request.getParameter("bike_id"));
+        long bikeId = Long.parseLong(request.getParameter(ParameterName.BIKE_ID));
         try {
-            session.setAttribute("user", new RentStartedTransaction().assignBikeToUser(userId, bikeId));
+            session.setAttribute(ParameterName.USER, new RentStartedTransaction().assignBikeToUser(userId, bikeId));
             page = ConfigurationManager.getProperty("path.page.ride");
         } catch (TransactionException e) {
             page = ConfigurationManager.getProperty("path.page.main");

@@ -17,7 +17,7 @@ import by.epam.bikesharing.command.signup.RegisterCommand;
 import by.epam.bikesharing.command.signup.SignupCommand;
 import by.epam.bikesharing.command.signup.VerifyCommand;
 
-public enum CommandEnum {
+public enum CommandType {
     LOGIN {
         {
             this.command = new LoginCommand();
@@ -26,11 +26,6 @@ public enum CommandEnum {
     LOGOUT {
         {
             this.command = new LogoutCommand();
-        }
-    },
-    SEARCH {
-        {
-            this.command = new SearchCommand();
         }
     },
     SIGNUP {

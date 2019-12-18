@@ -1,6 +1,7 @@
 package by.epam.bikesharing.command.admin;
 
 import by.epam.bikesharing.command.ActionCommand;
+import by.epam.bikesharing.constant.ParameterName;
 import by.epam.bikesharing.service.BikeModelLogic;
 import by.epam.bikesharing.service.pages.PagesLogic;
 import by.epam.bikesharing.resource.ConfigurationManager;
@@ -11,10 +12,10 @@ public class ChangeCostCommand implements ActionCommand {
 
     @Override
     public String execute(HttpServletRequest request) {
-        String id = request.getParameter("id");
-        String cost = request.getParameter("cost");
+        String id = request.getParameter(ParameterName.ID);
+        String cost = request.getParameter(ParameterName.COST);
         new BikeModelLogic().editModelCost(Long.parseLong(id), cost);
-        request.setAttribute("models", new PagesLogic().searchModels());
+        request.setAttribute(ParameterName.MODELS, new PagesLogic().searchModels());
         return ConfigurationManager.getProperty("path.page.models");
     }
 }

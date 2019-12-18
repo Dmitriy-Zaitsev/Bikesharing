@@ -109,6 +109,7 @@ public class UserDao extends AbstractDao {
         user.setRole(resultSet.getString("Role"));
         user.setBalance(resultSet.getBigDecimal("Balance"));
         user.setImage(resultSet.getString("Image"));
+        user.setLocale(resultSet.getString("locale"));
         user.setPasswordHash(new PasswordHash(
                 resultSet.getBytes("PasswordHash"),
                 resultSet.getBytes("PasswordSalt")

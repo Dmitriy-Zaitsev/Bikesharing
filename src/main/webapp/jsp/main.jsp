@@ -29,10 +29,10 @@
         <div id="map"></div>
         <div class="scroll_menu" id="gallery"></div>
         <div id="balance" class="card card-body">
-            <h6 class="card-title" style="text-align: center">${stringManager.get("balance")}</h6>
+            <h6 class="card-title" style="text-align: center">${stringManager.get("balance", sessionScope.locale)}</h6>
             <h5 class="card-text" style="text-align: center">$<fmt:formatNumber value = "${sessionScope.user.balance}" maxFractionDigits = "2" /></h5>
-            <a class="btn btn-success" href="${request.contextPath}/controller?command=cards_page" style="width: 100%; margin-bottom: 5px">${stringManager.get("replenish")}</a>
-            <a class="btn btn-primary" href="${request.contextPath}/jsp/new_card.jsp" style="width: 100%">${stringManager.get("add_card")}</a>
+            <a class="btn btn-success" href="${request.contextPath}/controller?command=cards_page" style="width: 100%; margin-bottom: 5px">${stringManager.get("replenish", sessionScope.locale)}</a>
+            <a class="btn btn-primary" href="${request.contextPath}/jsp/new_card.jsp" style="width: 100%">${stringManager.get("add_card", sessionScope.locale)}</a>
         </div>
     </div>
     <c:import url="/jsp/import/map_init.jsp"/>

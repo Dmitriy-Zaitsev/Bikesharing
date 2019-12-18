@@ -5,11 +5,11 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class CvvValidationTest {
+class BankAccountValidationTest {
 
     @Test
-    void isValid() {
-        assertTrue(CvvValidation.isValid("666"));
-        assertFalse(CvvValidation.isValid("00O"));
+    void isValidCvv() {
+        assertTrue(BankAccountValidation.isValidCvv("666"));
+        assertFalse(BankAccountValidation.isValidCvv("00O"));
     }
 }

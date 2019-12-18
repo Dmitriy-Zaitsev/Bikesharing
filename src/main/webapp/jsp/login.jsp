@@ -9,12 +9,12 @@
     <form name="loginForm" method="POST" action="controller">
         <input type="hidden" name="command" value="login" />
         <div class="form-group">
-            <label for="exampleInputLogin1">Login</label>
-            <input name="login" type="text" class="form-control" id="exampleInputLogin1" placeholder="Enter login">
+            <label for="input_login">Login</label>
+            <input name="login" type="text" class="form-control" id="input_login" placeholder="Enter login">
         </div>
         <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input name="password" type="password" class="form-control" id="exampleInputPassword1" aria-describedby="passwordHelp" placeholder="Password">
+            <label for="input_password">Password</label>
+            <input name="password" type="password" class="form-control" id="input_password" aria-describedby="passwordHelp" placeholder="Password">
         </div>
         <div class="form-group form-check">
             <input type="checkbox" class="form-check-input" id="exampleCheck1">
