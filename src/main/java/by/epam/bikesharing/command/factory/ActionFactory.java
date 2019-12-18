@@ -3,7 +3,7 @@ package by.epam.bikesharing.command.factory;
 import by.epam.bikesharing.SessionRequestContent;
 import by.epam.bikesharing.command.ActionCommand;
 import by.epam.bikesharing.command.EmptyCommand;
-import by.epam.bikesharing.command.client.CommandEnum;
+import by.epam.bikesharing.command.CommandEnum;
 import by.epam.bikesharing.resource.MessageManager;
 
 public class ActionFactory {

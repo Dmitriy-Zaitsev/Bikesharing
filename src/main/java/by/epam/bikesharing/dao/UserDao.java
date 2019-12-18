@@ -1,7 +1,7 @@
 package by.epam.bikesharing.dao;
 
 import by.epam.bikesharing.entity.User;
-import by.epam.bikesharing.logic.PasswordHash;
+import by.epam.bikesharing.service.PasswordHash;
 
 import java.math.BigDecimal;
 import java.sql.PreparedStatement;

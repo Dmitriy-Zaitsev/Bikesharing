@@ -4,7 +4,7 @@ import by.epam.bikesharing.command.ActionCommand;
 import by.epam.bikesharing.entity.User;
 import by.epam.bikesharing.exception.NotEnoughMoneyException;
 import by.epam.bikesharing.exception.TransactionException;
-import by.epam.bikesharing.logic.BalanceLogic;
+import by.epam.bikesharing.service.BalanceLogic;
 import by.epam.bikesharing.resource.ConfigurationManager;
 import by.epam.bikesharing.validation.CvvValidation;
 import by.epam.bikesharing.validation.MoneyValidation;

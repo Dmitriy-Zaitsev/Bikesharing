@@ -1,6 +1,6 @@
 package by.epam.bikesharing.entity;
 
-import by.epam.bikesharing.logic.PasswordHash;
+import by.epam.bikesharing.service.PasswordHash;
 
 import java.math.BigDecimal;
 import java.util.StringJoiner;

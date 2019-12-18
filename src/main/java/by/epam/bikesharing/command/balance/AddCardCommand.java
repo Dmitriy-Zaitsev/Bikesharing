@@ -4,7 +4,7 @@ import by.epam.bikesharing.command.ActionCommand;
 import by.epam.bikesharing.dao.CardDao;
 import by.epam.bikesharing.entity.Card;
 import by.epam.bikesharing.entity.User;
-import by.epam.bikesharing.logic.PasswordHash;
+import by.epam.bikesharing.service.PasswordHash;
 import by.epam.bikesharing.resource.ConfigurationManager;
 
 import javax.servlet.http.HttpServletRequest;
