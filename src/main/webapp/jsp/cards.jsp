@@ -47,9 +47,9 @@
                 <form name="cardForm" method="POST" action="controller">
                     <input type="hidden" name="command" value="replenish_page" />
                     <input type="hidden" name="card_id" value="${card.id}" />
-                    <button type="submit" class="btn btn-primary">${stringManager.get("replenish_balance")}</button>
+                    <button type="submit" class="btn btn-primary">${stringManager.get("replenish_balance", sessionScope.locale)}</button>
                 </form>
-                <div class="btn btn-danger">${stringManager.get("delete_card")}</div>
+                <div class="btn btn-danger">${stringManager.get("delete_card", sessionScope.locale)}</div>
             </div>
         </div>
     </c:forEach>

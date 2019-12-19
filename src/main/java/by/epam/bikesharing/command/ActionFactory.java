@@ -2,6 +2,7 @@ package by.epam.bikesharing.command;
 
 import by.epam.bikesharing.SessionRequestContent;
 import by.epam.bikesharing.command.pages.EmptyCommand;
+import by.epam.bikesharing.constant.LocaleConstant;
 import by.epam.bikesharing.resource.MessageManager;
 
 public class ActionFactory {
@@ -16,7 +17,7 @@ public class ActionFactory {
             CommandType currentEnum = CommandType.valueOf(action.toUpperCase());
             current = currentEnum.getCurrentCommand();
         } catch (IllegalArgumentException e) {
-            request.setAttribute("wrongAction", action + MessageManager.getProperty("message.wrongaction"));
+            request.setAttribute("wrongAction", action + MessageManager.getProperty("message.wrongaction", LocaleConstant.DEFAULT));
         }
         return current;
     }

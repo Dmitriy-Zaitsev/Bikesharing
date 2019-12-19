@@ -25,9 +25,7 @@
             <input name="repeatPassword" type="password" class="form-control" id="inputRepeatPassword" placeholder="Confirm password">
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
-        ${errorLoginPassMessage}
-        ${wrongAction}
-        ${nullPage}
+        ${message}
     </form>
 </div>
 </body>

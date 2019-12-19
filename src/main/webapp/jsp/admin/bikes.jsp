@@ -39,11 +39,11 @@
             <table class="table table-borderless table-hover" id="bikesTable">
                 <thead>
                 <tr>
-                    <th scope="col">${stringManager.get("serial_number")}</th>
-                    <th scope="col">${stringManager.get("model")}</th>
-                    <th scope="col">${stringManager.get("cost")}</th>
-                    <th scope="col">${stringManager.get("spot")}</th>
-                    <th scope="col">${stringManager.get("user")}</th>
+                    <th scope="col">${stringManager.get("serial_number", sessionScope.locale)}</th>
+                    <th scope="col">${stringManager.get("model", sessionScope.locale)}</th>
+                    <th scope="col">${stringManager.get("cost", sessionScope.locale)}</th>
+                    <th scope="col">${stringManager.get("spot", sessionScope.locale)}</th>
+                    <th scope="col">${stringManager.get("user", sessionScope.locale)}</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -51,7 +51,7 @@
                         <tr onclick="setForm(this)">
                             <td id="number">${bikes[loop.index].serialNumber}</td>
                             <td id="model_name">${bikes[loop.index].model.name}</td>
-                            <td id="cost">$<fmt:formatNumber value = "${bikes[loop.index].model.cost}" maxFractionDigits = "2"/>/${stringManager.get("hour")}</td>
+                            <td id="cost">$<fmt:formatNumber value = "${bikes[loop.index].model.cost}" maxFractionDigits = "2"/>/${stringManager.get("hour", sessionScope.locale)}</td>
                             <td id="spot_name">${spot_names[loop.index]}</td>
                             <c:set var="profile_name" scope="request" value="${user_names[loop.index]}"/>
                             <td id="user_name">
@@ -81,11 +81,11 @@
                     <input name="bike_id" type="text" class="form-control" id="id_input">
                 </div>
                 <div class="form-group">
-                    <label for="numberInput">${stringManager.get("serial_number")}</label>
+                    <label for="numberInput">${stringManager.get("serial_number", sessionScope.locale)}</label>
                     <input name="serial_number" type="text" class="form-control" id="numberInput">
                 </div>
                 <div class="form-group">
-                    <label>${stringManager.get("model")}</label>
+                    <label>${stringManager.get("model", sessionScope.locale)}</label>
                     <select name="select_model" id="model_select" class="form-control">
                         <c:forEach items="${models}" var="model">
                             <option name="${model.id}">${model.name}</option>
@@ -93,7 +93,7 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <label>${stringManager.get("spot")}</label>
+                    <label>${stringManager.get("spot", sessionScope.locale)}</label>
                     <select name="select_spot" id="spot_select" class="form-control">
                         <option>NULL</option>
                         <c:forEach items="${spots}" var="spot">
@@ -101,8 +101,8 @@
                         </c:forEach>
                     </select>
                 </div>
-                <button type="submit" class="btn btn-primary btn-form" name="action" value="add">${stringManager.get("add_bike")}</button>
-                <button type="submit" class="btn btn-success btn-form" name="action" value="edit">${stringManager.get("edit_spot")}</button>
+                <button type="submit" class="btn btn-primary btn-form" name="action" value="add">${stringManager.get("add_bike", sessionScope.locale)}</button>
+                <button type="submit" class="btn btn-success btn-form" name="action" value="edit">${stringManager.get("edit_spot", sessionScope.locale)}</button>
             </form>
         </div>
     </div>

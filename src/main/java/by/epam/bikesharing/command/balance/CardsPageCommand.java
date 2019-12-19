@@ -2,7 +2,6 @@ package by.epam.bikesharing.command.balance;
 
 import by.epam.bikesharing.command.ActionCommand;
 import by.epam.bikesharing.constant.ParameterName;
-import by.epam.bikesharing.dao.CardDao;
 import by.epam.bikesharing.entity.Card;
 import by.epam.bikesharing.entity.User;
 import by.epam.bikesharing.resource.ConfigurationManager;

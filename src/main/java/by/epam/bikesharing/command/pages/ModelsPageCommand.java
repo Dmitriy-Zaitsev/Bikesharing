@@ -3,8 +3,8 @@ package by.epam.bikesharing.command.pages;
 import by.epam.bikesharing.command.ActionCommand;
 import by.epam.bikesharing.constant.ParameterName;
 import by.epam.bikesharing.entity.BikeModel;
-import by.epam.bikesharing.service.pages.PagesLogic;
 import by.epam.bikesharing.resource.ConfigurationManager;
+import by.epam.bikesharing.service.pages.PagesLogic;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;

@@ -3,16 +3,11 @@ package by.epam.bikesharing.command.admin;
 import by.epam.bikesharing.command.ActionCommand;
 import by.epam.bikesharing.constant.ParameterName;
 import by.epam.bikesharing.constant.ParameterValue;
-import by.epam.bikesharing.entity.Bike;
-import by.epam.bikesharing.entity.BikeModel;
-import by.epam.bikesharing.entity.Spot;
+import by.epam.bikesharing.resource.ConfigurationManager;
 import by.epam.bikesharing.service.BikeLogic;
 import by.epam.bikesharing.service.pages.BikesPageLogic;
-import by.epam.bikesharing.service.pages.PagesLogic;
-import by.epam.bikesharing.resource.ConfigurationManager;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.List;
 
 public class AddBikeCommand implements ActionCommand {
 

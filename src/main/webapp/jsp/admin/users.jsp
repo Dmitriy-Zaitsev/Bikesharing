@@ -29,9 +29,9 @@
             <table class="table table-borderless table-hover" id="bikesTable">
                 <thead>
                 <tr>
-                    <th scope="col">${stringManager.get("login")}</th>
-                    <th scope="col">${stringManager.get("email")}</th>
-                    <th scope="col">${stringManager.get("balance")}</th>
+                    <th scope="col">${stringManager.get("login", sessionScope.locale)}</th>
+                    <th scope="col">${stringManager.get("email", sessionScope.locale)}</th>
+                    <th scope="col">${stringManager.get("balance", sessionScope.locale)}</th>
                     <th scope="col">BikeID</th>
                 </tr>
                 </thead>

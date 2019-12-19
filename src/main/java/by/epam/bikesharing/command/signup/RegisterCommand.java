@@ -1,6 +1,7 @@
 package by.epam.bikesharing.command.signup;
 
 import by.epam.bikesharing.command.ActionCommand;
+import by.epam.bikesharing.constant.LocaleConstant;
 import by.epam.bikesharing.constant.ParameterName;
 import by.epam.bikesharing.constant.ParameterValue;
 import by.epam.bikesharing.resource.ConfigurationManager;
@@ -8,6 +9,7 @@ import by.epam.bikesharing.resource.MessageManager;
 import by.epam.bikesharing.service.PasswordHash;
 import by.epam.bikesharing.service.email.EmailSender;
 import by.epam.bikesharing.service.email.VerificationCode;
+import by.epam.bikesharing.validation.AuthenticatorValidation;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -20,6 +22,28 @@ public class RegisterCommand implements ActionCommand {
         String login = request.getParameter(ParameterName.LOGIN);
         String password = request.getParameter(ParameterName.PASSWORD);
         String email = request.getParameter(ParameterName.EMAIL);
+        StringBuilder messageBuilder = new StringBuilder();
+        if (!AuthenticatorValidation.isValidEmail(email)) {
+            messageBuilder.append("<br>").append(MessageManager.getProperty("message.invalid_email"));
+        }
+        if (AuthenticatorValidation.emailIsInUse(email)) {
+            messageBuilder.append("<br>").append(MessageManager.getProperty("message.email_in_use"));
+        }
+        if (!AuthenticatorValidation.isValidLogin(login)) {
+            messageBuilder.append("<br>").append(MessageManager.getProperty("message.invalid_login"));
+        }
+        if (AuthenticatorValidation.loginIsInUse(login)) {
+            messageBuilder.append("<br>").append(MessageManager.getProperty("message.login_in_use"));
+        }
+        if (!AuthenticatorValidation.isValidPassword(password)) {
+            messageBuilder.append("<br>").append(MessageManager.getProperty("message.invalid_password"));
+        }
+        String message = messageBuilder.toString();
+        if (!message.isEmpty()) {
+            request.setAttribute(ParameterName.MESSAGE, message);
+            return ConfigurationManager.getProperty("path.page.signup");
+        }
+
         HttpSession session = request.getSession(false);
         if (session != null && session.getAttribute(ParameterName.ROLE).equals(ParameterValue.ROLE_GUEST)) {
             String verificationCode = (new VerificationCode()).getCode(6);
@@ -32,7 +56,7 @@ public class RegisterCommand implements ActionCommand {
             emailSender.sendVerificationCode(verificationCode);
             page = ConfigurationManager.getProperty("path.page.verification");
         } else {
-            request.setAttribute("errorLoginPassMessage", MessageManager.getProperty("message.loginerror"));
+            request.setAttribute("errorLoginPassMessage", MessageManager.getProperty("message.loginerror", LocaleConstant.DEFAULT));
             page = ConfigurationManager.getProperty("path.page.login");
         }
         return page;

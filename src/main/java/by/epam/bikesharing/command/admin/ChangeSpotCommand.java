@@ -2,9 +2,9 @@ package by.epam.bikesharing.command.admin;
 
 import by.epam.bikesharing.command.ActionCommand;
 import by.epam.bikesharing.constant.ParameterName;
+import by.epam.bikesharing.resource.ConfigurationManager;
 import by.epam.bikesharing.service.BikeLogic;
 import by.epam.bikesharing.service.pages.PagesLogic;
-import by.epam.bikesharing.resource.ConfigurationManager;
 
 import javax.servlet.http.HttpServletRequest;
 

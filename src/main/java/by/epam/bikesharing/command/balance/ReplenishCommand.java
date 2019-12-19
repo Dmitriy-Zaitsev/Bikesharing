@@ -5,8 +5,8 @@ import by.epam.bikesharing.constant.ParameterName;
 import by.epam.bikesharing.entity.User;
 import by.epam.bikesharing.exception.NotEnoughMoneyException;
 import by.epam.bikesharing.exception.TransactionException;
-import by.epam.bikesharing.service.BalanceLogic;
 import by.epam.bikesharing.resource.ConfigurationManager;
+import by.epam.bikesharing.service.BalanceLogic;
 import by.epam.bikesharing.validation.BankAccountValidation;
 import by.epam.bikesharing.validation.MoneyValidation;
 

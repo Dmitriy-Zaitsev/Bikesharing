@@ -39,18 +39,18 @@
                     </c:choose>
                 </div>
                 <div class="form-group upload-btn-wrapper">
-                    <button class="btn btn-outline-primary btn-block">${stringManager.get("upload_photo")}</button>
+                    <button class="btn btn-outline-primary btn-block">${stringManager.get("upload_photo", sessionScope.locale)}</button>
                     <input type="file" name="photo_file" onchange="previewFile()"/>
                 </div>
                 <form name="addForm" method="post" action="${request.contextPath}/controller">
                     <input type="hidden" name="command" value="rents_page" />
                     <input type="hidden" name="id" value="${requestScope.get("profile_user").id}" />
-                    <input type="submit" class="btn btn-outline-primary btn-block" value="${stringManager.get("rents")}">
+                    <input type="submit" class="btn btn-outline-primary btn-block" value="${stringManager.get("rents", sessionScope.locale)}">
                 </form>
                 <c:if test = "${sessionScope.user.id == requestScope.profile_user.id}">
                     <form name="addForm" method="post" action="${request.contextPath}/controller">
                         <input type="hidden" name="command" value="cards_page" />
-                        <input type="submit" class="btn btn-outline-primary btn-block" value="${stringManager.get("cards")}">
+                        <input type="submit" class="btn btn-outline-primary btn-block" value="${stringManager.get("cards", sessionScope.locale)}">
                     </form>
                 </c:if>
             </div>
@@ -59,7 +59,7 @@
             <c:if test = "${not empty requestScope.message}">
                 <div class="alert alert-danger alert-dismissable">${requestScope.message}</div>
             </c:if>
-            <h3>${stringManager.get("profile_info")}</h3>
+            <h3>${stringManager.get("profile_info", sessionScope.locale)}</h3>
             <form name="profileForm" class="form-horizontal" role="form" method="POST" action="controller" autocomplete="off">
                 <input type="hidden" name="command" value="save_profile" />
                 <input type="hidden" name="image" value="" />
@@ -73,25 +73,25 @@
                     </a>
                 </div>
                 <div class="form-group">
-                    <label class="col-lg-3 control-label" for="login">${stringManager.get("login")}:</label>
+                    <label class="col-lg-3 control-label" for="login">${stringManager.get("login", sessionScope.locale)}:</label>
                     <div class="col-lg-8">
                         <input name="login" id="login" class="form-control" type="text" value="${requestScope.profile_user.login}">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="col-lg-3 control-label" for="email">${stringManager.get("email")}:</label>
+                    <label class="col-lg-3 control-label" for="email">${stringManager.get("email", sessionScope.locale)}:</label>
                     <div class="col-lg-8">
                         <input name="email" id="email" class="form-control" type="text" value="${requestScope.profile_user.email}" autocomplete="new-password">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="col-md-3 control-label" for="old_password">${stringManager.get("current_password")}:</label>
+                    <label class="col-md-3 control-label" for="old_password">${stringManager.get("current_password", sessionScope.locale)}:</label>
                     <div class="col-md-8">
                         <input class="form-control" id="old_password" name="old_password" type="password" placeholder="Enter current password" autocomplete="new-password">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="col-md-3 control-label" for="new_password">${stringManager.get("new_password")}:</label>
+                    <label class="col-md-3 control-label" for="new_password">${stringManager.get("new_password", sessionScope.locale)}:</label>
                     <div class="col-md-8">
                         <input name="new_password" class="form-control" type="password" placeholder="Enter new password" id="new_password">
                     </div>
@@ -104,7 +104,7 @@
                 <div class="form-group">
                     <div class="col-md-8">
                         <input type="hidden" name="update_image" value="false" />
-                        <input type="submit" class="btn btn-primary" value="${stringManager.get("save")}">
+                        <input type="submit" class="btn btn-primary" value="${stringManager.get("save", sessionScope.locale)}">
                     </div>
                 </div>
             </form>

@@ -1,5 +1,6 @@
 package by.epam.bikesharing.service.email;
 
+import by.epam.bikesharing.constant.LocaleConstant;
 import by.epam.bikesharing.resource.MessageManager;
 import com.sun.mail.smtp.SMTPTransport;
 import org.apache.logging.log4j.LogManager;
@@ -26,7 +27,7 @@ public class EmailSender {
     }
 
     public void sendVerificationCode(String code) {
-        subject = MessageManager.getProperty("email.verification.subject");
+        subject = MessageManager.getProperty("email.verification.subject", LocaleConstant.DEFAULT);
         body = formVerificationHtml(code);
         try {
             sendMail();
@@ -37,7 +38,7 @@ public class EmailSender {
     }
 
     private String formVerificationHtml(String code) {
-        return String.format("<h2>%s<h2><h1>%s<h1>", MessageManager.getProperty("email.verification.body"), code);
+        return String.format("<h2>%s<h2><h1>%s<h1>", MessageManager.getProperty("email.verification.body", LocaleConstant.DEFAULT), code);
     }
 
     private void sendMail() throws MessagingException {

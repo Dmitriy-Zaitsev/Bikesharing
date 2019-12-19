@@ -30,8 +30,10 @@ public class UserDao extends AbstractDao {
     }
 
     public User findUserByLogin(String login) {
+        User user = null;
         List users = find(SELECT_USER_BY_LOGIN, login);
-        return (User) users.get(0); //(!users.isEmpty())? Optional.of(users.get(0)) : Optional.empty();
+        if (!users.isEmpty()) user = (User) users.get(0);
+        return user;
     }
 
     public User findUserByEmail(String email) {

@@ -1,5 +1,7 @@
 package by.epam.bikesharing.filter;
 
+import by.epam.bikesharing.constant.ParameterName;
+
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
 import javax.servlet.annotation.WebInitParam;
@@ -21,7 +23,7 @@ public class ServletSecurityFilter implements Filter {
         HttpServletRequest httpRequest = (HttpServletRequest) request;
         HttpServletResponse httpResponse = (HttpServletResponse) response;
         HttpSession session = httpRequest.getSession();
-        if (session.getAttribute("user") == null) {
+        if (session.getAttribute(ParameterName.USER) == null) {
             RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher(httpRequest.getContextPath() + indexPath);
             dispatcher.forward(httpRequest, httpResponse);
             return;

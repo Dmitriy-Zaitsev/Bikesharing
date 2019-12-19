@@ -31,7 +31,7 @@ public class VerifyCommand implements ActionCommand {
                 page = ConfigurationManager.getProperty("path.page.verification");
             }
         } else {
-            request.setAttribute("errorLoginPassMessage", MessageManager.getProperty("message.loginerror"));
+            request.setAttribute("errorLoginPassMessage", MessageManager.getProperty("message.loginerror", (String) session.getAttribute("locale")));
             page = ConfigurationManager.getProperty("path.page.login");
         }
         return page;

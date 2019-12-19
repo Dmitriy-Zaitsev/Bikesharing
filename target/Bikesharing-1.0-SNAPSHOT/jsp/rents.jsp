@@ -14,9 +14,9 @@
             <table class="table table-borderless table-hover" id="bikesTable">
                 <thead>
                 <tr>
-                    <th scope="col">${stringManager.get("start")}</th>
-                    <th scope="col">${stringManager.get("end")}</th>
-                    <th scope="col">${stringManager.get("price")}</th>
+                    <th scope="col">${stringManager.get("start", sessionScope.locale)}</th>
+                    <th scope="col">${stringManager.get("end", sessionScope.locale)}</th>
+                    <th scope="col">${stringManager.get("price", sessionScope.locale)}</th>
                 </tr>
                 </thead>
                 <tbody>

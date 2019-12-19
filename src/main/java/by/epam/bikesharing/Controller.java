@@ -2,6 +2,7 @@ package by.epam.bikesharing;
 
 import by.epam.bikesharing.command.ActionCommand;
 import by.epam.bikesharing.command.ActionFactory;
+import by.epam.bikesharing.constant.LocaleConstant;
 import by.epam.bikesharing.resource.ConfigurationManager;
 import by.epam.bikesharing.resource.MessageManager;
 import by.epam.bikesharing.resource.StringManager;
@@ -13,8 +14,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-
-import static org.apache.logging.log4j.web.WebLoggerContextUtils.getServletContext;
 
 @WebServlet("/controller")
 public class Controller extends HttpServlet {
@@ -45,7 +44,7 @@ public class Controller extends HttpServlet {
             dispatcher.forward(request, response);
         } else {
             page = ConfigurationManager.getProperty("path.page.index");
-            request.getSession().setAttribute("nullPage", MessageManager.getProperty("message.nullpage"));
+            request.getSession().setAttribute("nullPage", MessageManager.getProperty("message.nullpage", LocaleConstant.DEFAULT));
             response.sendRedirect(request.getContextPath() + page);
         }
     }

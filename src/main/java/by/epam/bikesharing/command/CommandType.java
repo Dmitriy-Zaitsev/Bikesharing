@@ -1,6 +1,9 @@
 package by.epam.bikesharing.command;
 
-import by.epam.bikesharing.command.admin.*;
+import by.epam.bikesharing.command.admin.AddBikeCommand;
+import by.epam.bikesharing.command.admin.AddModelCommand;
+import by.epam.bikesharing.command.admin.ChangeCostCommand;
+import by.epam.bikesharing.command.admin.ChangeSpotCommand;
 import by.epam.bikesharing.command.balance.AddCardCommand;
 import by.epam.bikesharing.command.balance.CardsPageCommand;
 import by.epam.bikesharing.command.balance.ReplenishCommand;

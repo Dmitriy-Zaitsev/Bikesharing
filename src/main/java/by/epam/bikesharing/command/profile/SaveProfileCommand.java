@@ -5,9 +5,9 @@ import by.epam.bikesharing.constant.ParameterName;
 import by.epam.bikesharing.constant.ParameterValue;
 import by.epam.bikesharing.constant.ServiceConstant;
 import by.epam.bikesharing.entity.User;
+import by.epam.bikesharing.resource.ConfigurationManager;
 import by.epam.bikesharing.resource.MessageManager;
 import by.epam.bikesharing.service.ProfileLogic;
-import by.epam.bikesharing.resource.ConfigurationManager;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -28,7 +28,7 @@ public class SaveProfileCommand implements ActionCommand {
             user = logic.getNewUser();
             session.setAttribute(ParameterName.USER, user);
         } else {
-            request.setAttribute(ParameterName.MESSAGE, MessageManager.getProperty(message));
+            request.setAttribute(ParameterName.MESSAGE, MessageManager.getProperty(message, (String) session.getAttribute("locale")));
         }
         request.setAttribute(ParameterName.PROFILE_USER, user);
         return ConfigurationManager.getProperty("path.page.profile");

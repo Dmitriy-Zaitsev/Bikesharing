@@ -12,14 +12,14 @@
         <input type="hidden" name="command" value="replenish" />
         <input type="hidden" name="card_id" value="${requestScope.card_id}" />
         <div class="form-group">
-            <label for="inputAmount">${stringManager.get("amount")}</label>
+            <label for="inputAmount">${stringManager.get("amount", sessionScope.locale)}</label>
             <input name="amount" type="text" class="form-control" id="inputAmount" placeholder="Enter amount of money">
         </div>
         <div class="form-group">
             <label for="inputCvv">CVV</label>
             <input name="cvv" type="password" class="form-control" id="inputCvv" placeholder="Enter CVV code">
         </div>
-        <button type="submit" class="btn btn-primary">${stringManager.get("submit")}</button>
+        <button type="submit" class="btn btn-primary">${stringManager.get("submit", sessionScope.locale)}</button>
     </form>
 </div>
 </body>

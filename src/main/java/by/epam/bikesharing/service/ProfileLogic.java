@@ -3,9 +3,7 @@ package by.epam.bikesharing.service;
 import by.epam.bikesharing.constant.ServiceConstant;
 import by.epam.bikesharing.dao.UserDao;
 import by.epam.bikesharing.entity.User;
-import by.epam.bikesharing.validation.EmailValidatiom;
-import by.epam.bikesharing.validation.LoginValidation;
-import by.epam.bikesharing.validation.PasswordValidation;
+import by.epam.bikesharing.validation.AuthenticatorValidation;
 
 import static by.epam.bikesharing.constant.ServiceConstant.UPDATE_SUCCESS;
 
@@ -59,10 +57,10 @@ public class ProfileLogic {
     }
 
     private String updateLogin() {
-        if (!LoginValidation.isValid(login)) {
+        if (!AuthenticatorValidation.isValidLogin(login)) {
             return INVALID_LOGIN;
         }
-        if (LoginValidation.isInUse(login)) {
+        if (AuthenticatorValidation.loginIsInUse(login)) {
             return LOGIN_IN_USE;
         }
         newUser.setLogin(login);
@@ -70,10 +68,10 @@ public class ProfileLogic {
     }
 
     private String updateEmail() {
-        if (!EmailValidatiom.isValid(email)) {
+        if (!AuthenticatorValidation.isValidEmail(email)) {
             return INVALID_EMAIL;
         }
-        if (EmailValidatiom.isInUse(email)) {
+        if (AuthenticatorValidation.emailIsInUse(email)) {
             return EMAIL_IN_USE;
         }
         newUser.setEmail(email);
@@ -92,7 +90,7 @@ public class ProfileLogic {
         if (!oldUser.getPasswordHash().isCorrectPassword(oldPassword)) {
             return OLD_PASSWORD_WRONG;
         }
-        if (!PasswordValidation.isValid(newPassword)) {
+        if (!AuthenticatorValidation.isValidPassword(newPassword)) {
             return INVALID_PASSWORD;
         }
         if (newPassword.equals(oldPassword)) {

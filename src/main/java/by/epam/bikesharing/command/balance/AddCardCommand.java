@@ -5,9 +5,9 @@ import by.epam.bikesharing.constant.ParameterName;
 import by.epam.bikesharing.constant.ServiceConstant;
 import by.epam.bikesharing.entity.Card;
 import by.epam.bikesharing.entity.User;
+import by.epam.bikesharing.resource.ConfigurationManager;
 import by.epam.bikesharing.resource.MessageManager;
 import by.epam.bikesharing.service.CardLogic;
-import by.epam.bikesharing.resource.ConfigurationManager;
 import by.epam.bikesharing.service.pages.PagesLogic;
 
 import javax.servlet.http.HttpServletRequest;
@@ -33,7 +33,7 @@ public class AddCardCommand implements ActionCommand {
             request.setAttribute(ParameterName.CARDS, cards);
             page = ConfigurationManager.getProperty("path.page.cards");
         } else {
-            request.setAttribute(ParameterName.MESSAGE, MessageManager.getProperty(addCardResult));
+            request.setAttribute(ParameterName.MESSAGE, MessageManager.getProperty(addCardResult, user.getLocale()));
             page = ConfigurationManager.getProperty("path.page.add_card");
         }
         return page;

@@ -4,8 +4,8 @@ import by.epam.bikesharing.command.ActionCommand;
 import by.epam.bikesharing.constant.ParameterName;
 import by.epam.bikesharing.entity.User;
 import by.epam.bikesharing.exception.TransactionException;
-import by.epam.bikesharing.service.rent.RentStartedTransaction;
 import by.epam.bikesharing.resource.ConfigurationManager;
+import by.epam.bikesharing.service.rent.RentStartedTransaction;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;

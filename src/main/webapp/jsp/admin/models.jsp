@@ -40,8 +40,8 @@
                 <thead>
                 <tr>
                     <th scope="col" style="display: none">ID</th>
-                    <th scope="col">${stringManager.get("name")}</th>
-                    <th scope="col">${stringManager.get("cost_hr")}</th>
+                    <th scope="col">${stringManager.get("name", sessionScope.locale)}</th>
+                    <th scope="col">${stringManager.get("cost_hr", sessionScope.locale)}</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -64,20 +64,20 @@
                     <input name="id" type="text" class="form-control" id="idInput">
                 </div>
                 <div class="form-group">
-                    <label for="nameInput">${stringManager.get("name")}</label>
+                    <label for="nameInput">${stringManager.get("name", sessionScope.locale)}</label>
                     <input name="name" type="text" class="form-control" id="nameInput">
                 </div>
                 <div class="form-group">
-                    <label for="costInput">${stringManager.get("cost_hr")}</label>
+                    <label for="costInput">${stringManager.get("cost_hr", sessionScope.locale)}</label>
                     <input name="cost" type="text" class="form-control" id="costInput">
                 </div>
                 <div class="form-group">
-                    <label for="imageInput">${stringManager.get("image_url")}</label>
+                    <label for="imageInput">${stringManager.get("image_url", sessionScope.locale)}</label>
                     <input name="image" type="text" class="form-control" id="imageInput">
                 </div>
                 <img id="bike_image" width="300">
-                <button type="submit" class="btn btn-primary btn-form" name="action" value="add">${stringManager.get("add_model")}</button>
-                <button type="submit" class="btn btn-success btn-form" name="action" value="edit">${stringManager.get("edit_cost")}</button>
+                <button type="submit" class="btn btn-primary btn-form" name="action" value="add">${stringManager.get("add_model", sessionScope.locale)}</button>
+                <button type="submit" class="btn btn-success btn-form" name="action" value="edit">${stringManager.get("edit_cost", sessionScope.locale)}</button>
             </form>
         </div>
     </div>

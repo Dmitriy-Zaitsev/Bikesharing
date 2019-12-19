@@ -1,5 +1,7 @@
 package by.epam.bikesharing.filter;
 
+import by.epam.bikesharing.constant.ParameterName;
+import by.epam.bikesharing.constant.ParameterValue;
 import by.epam.bikesharing.entity.User;
 
 import javax.servlet.*;
@@ -23,8 +25,8 @@ public class AccessFilter implements Filter {
         HttpServletRequest httpRequest = (HttpServletRequest) request;
         HttpServletResponse httpResponse = (HttpServletResponse) response;
         HttpSession session = httpRequest.getSession();
-        User user = (User) session.getAttribute("user");
-        if (!"admin".equals(user.getRole())) {
+        User user = (User) session.getAttribute(ParameterName.USER);
+        if (!ParameterValue.ROLE_ADMIN.equals(user.getRole())) {
             RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher(httpRequest.getContextPath() + indexPath);
             dispatcher.forward(httpRequest, httpResponse);
             return;
