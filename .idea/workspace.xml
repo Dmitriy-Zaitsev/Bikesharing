@@ -8,60 +8,45 @@
   <component name="ChangeListManager">
     <list default="true" id="f29a6538-ff65-4eb8-a7c5-f5bb0048136c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/bikesharing/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/bikesharing/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/bikesharing/command/ActionFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/bikesharing/command/ActionFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/bikesharing/command/CommandType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/bikesharing/command/CommandType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/bikesharing/command/admin/AddBikeCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/bikesharing/command/admin/AddBikeCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/bikesharing/command/admin/AddModelCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/bikesharing/command/admin/AddModelCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/bikesharing/command/admin/ChangeCostCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/bikesharing/command/admin/ChangeCostCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/bikesharing/command/admin/ChangeSpotCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/bikesharing/command/admin/ChangeSpotCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/bikesharing/command/balance/AddCardCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/bikesharing/command/balance/AddCardCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/bikesharing/command/balance/CardsPageCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/bikesharing/command/balance/CardsPageCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/bikesharing/command/balance/ReplenishCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/bikesharing/command/balance/ReplenishCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/bikesharing/command/login/LoginCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/bikesharing/command/login/LoginCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/bikesharing/command/pages/BikesPageCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/bikesharing/command/pages/BikesPageCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/bikesharing/command/pages/ModelsPageCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/bikesharing/command/pages/ModelsPageCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/bikesharing/command/pages/RentsPageCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/bikesharing/command/pages/RentsPageCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/bikesharing/command/profile/ProfileCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/bikesharing/command/profile/ProfileCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/bikesharing/command/profile/SaveProfileCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/bikesharing/command/profile/SaveProfileCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/bikesharing/command/rent/RentCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/bikesharing/command/rent/RentCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/bikesharing/command/signup/RegisterCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/bikesharing/command/signup/RegisterCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/bikesharing/command/signup/VerifyCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/bikesharing/command/signup/VerifyCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/bikesharing/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/bikesharing/dao/UserDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/bikesharing/filter/AccessFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/bikesharing/filter/AccessFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/bikesharing/filter/EncodingFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/bikesharing/filter/EncodingFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/bikesharing/filter/ServletSecurityFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/bikesharing/filter/ServletSecurityFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/bikesharing/resource/MessageManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/bikesharing/resource/MessageManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/bikesharing/resource/StringManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/bikesharing/resource/StringManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/bikesharing/service/ProfileLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/bikesharing/service/ProfileLogic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/bikesharing/service/email/EmailSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/epam/bikesharing/service/email/EmailSender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/bikesharing/validation/EmailValidatiom.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/bikesharing/validation/LoginValidation.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/bikesharing/validation/PasswordValidation.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/admin/bikes.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/admin/bikes.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/admin/models.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/admin/models.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/admin/users.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/admin/users.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/cards.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/cards.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/profile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/profile.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/rents.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/rents.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/replenish.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/replenish.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/signup.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/signup.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/russia.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/russia.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/united-kingdom.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/united-kingdom.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/bikesharing/service/PasswordHashTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/epam/bikesharing/service/PasswordHashTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/bikesharing/validation/BankAccountValidationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/epam/bikesharing/validation/BankAccountValidationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/by/epam/bikesharing/validation/MoneyValidationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/epam/bikesharing/validation/MoneyValidationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Bikesharing-1.0-SNAPSHOT/jsp/admin/bikes.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/Bikesharing-1.0-SNAPSHOT/jsp/admin/bikes.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Bikesharing-1.0-SNAPSHOT/jsp/admin/models.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/Bikesharing-1.0-SNAPSHOT/jsp/admin/models.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Bikesharing-1.0-SNAPSHOT/jsp/admin/users.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/Bikesharing-1.0-SNAPSHOT/jsp/admin/users.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Bikesharing-1.0-SNAPSHOT/jsp/cards.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/Bikesharing-1.0-SNAPSHOT/jsp/cards.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Bikesharing-1.0-SNAPSHOT/jsp/import/navbar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/Bikesharing-1.0-SNAPSHOT/jsp/import/navbar.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Bikesharing-1.0-SNAPSHOT/jsp/main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/Bikesharing-1.0-SNAPSHOT/jsp/main.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Bikesharing-1.0-SNAPSHOT/jsp/profile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/Bikesharing-1.0-SNAPSHOT/jsp/profile.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Bikesharing-1.0-SNAPSHOT/jsp/rents.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/Bikesharing-1.0-SNAPSHOT/jsp/rents.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Bikesharing-1.0-SNAPSHOT/jsp/replenish.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/Bikesharing-1.0-SNAPSHOT/jsp/replenish.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Bikesharing-1.0-SNAPSHOT/jsp/signup.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/Bikesharing-1.0-SNAPSHOT/jsp/signup.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Bikesharing-1.0-SNAPSHOT/russia.svg" beforeDir="false" afterPath="$PROJECT_DIR$/target/Bikesharing-1.0-SNAPSHOT/russia.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Bikesharing-1.0-SNAPSHOT/united-kingdom.svg" beforeDir="false" afterPath="$PROJECT_DIR$/target/Bikesharing-1.0-SNAPSHOT/united-kingdom.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/bikesharing/service/ImageLoader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/bikesharing/service/pages/ProfilePageLogic.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/bikesharing/service/pages/UserRentsPageLogic.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/epam/bikesharing/service/pages/UsersPageLogic.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/bootstrap/css/bootstrap-grid.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/bootstrap/css/bootstrap-grid.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/bootstrap/css/bootstrap-grid.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/bootstrap/css/bootstrap-grid.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/bootstrap/css/bootstrap-reboot.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/bootstrap/css/bootstrap-reboot.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/bootstrap/css/bootstrap-reboot.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/bootstrap/css/bootstrap-reboot.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/bootstrap/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/bootstrap/css/bootstrap.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/bootstrap/css/bootstrap.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/bootstrap/css/bootstrap.min_2.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/bootstrap/js/bootstrap.bundle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/bootstrap/js/bootstrap.bundle.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/bootstrap/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/bootstrap/js/bootstrap.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Bikesharing-1.0-SNAPSHOT/bootstrap/css/bootstrap-grid.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Bikesharing-1.0-SNAPSHOT/bootstrap/css/bootstrap-grid.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Bikesharing-1.0-SNAPSHOT/bootstrap/css/bootstrap-grid.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Bikesharing-1.0-SNAPSHOT/bootstrap/css/bootstrap-grid.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Bikesharing-1.0-SNAPSHOT/bootstrap/css/bootstrap-reboot.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Bikesharing-1.0-SNAPSHOT/bootstrap/css/bootstrap-reboot.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Bikesharing-1.0-SNAPSHOT/bootstrap/css/bootstrap-reboot.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Bikesharing-1.0-SNAPSHOT/bootstrap/css/bootstrap-reboot.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Bikesharing-1.0-SNAPSHOT/bootstrap/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Bikesharing-1.0-SNAPSHOT/bootstrap/css/bootstrap.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Bikesharing-1.0-SNAPSHOT/bootstrap/css/bootstrap.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Bikesharing-1.0-SNAPSHOT/bootstrap/css/bootstrap.min_2.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Bikesharing-1.0-SNAPSHOT/bootstrap/js/bootstrap.bundle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Bikesharing-1.0-SNAPSHOT/bootstrap/js/bootstrap.bundle.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Bikesharing-1.0-SNAPSHOT/bootstrap/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Bikesharing-1.0-SNAPSHOT/bootstrap/js/bootstrap.js.map" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -76,88 +61,36 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/admin/bikes.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/bikesharing/filter/ControllerAccessFilter.java">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1134">
-              <caret line="63" selection-start-line="63" selection-end-line="63" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="180">
+              <caret line="10" column="9" lean-forward="true" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/bikesharing/command/signup/SignupCommand.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/bikesharing/command/signup/RegisterCommand.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="24" selection-start-line="24" selection-end-line="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/bikesharing/validation/AuthenticatorValidation.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/bikesharing/service/email/EmailSender.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="532">
-              <caret line="54" column="40" selection-start-line="54" selection-start-column="40" selection-end-line="54" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/bikesharing/dao/AbstractDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/bikesharing/dao/UserDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="38" column="10" selection-start-line="38" selection-start-column="10" selection-end-line="38" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/bikesharing/command/login/LoginCommand.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
-              <caret line="35" column="105" selection-start-line="35" selection-start-column="105" selection-end-line="35" selection-end-column="105" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/bikesharing/service/LoginLogic.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/cards.jsp">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -217,8 +150,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/by/epam/bikesharing/validation/DateValidation.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/epam/bikesharing/validation/BankAccountValidation.java" />
         <option value="$PROJECT_DIR$/src/main/java/by/epam/bikesharing/validation/NameValidation.java" />
         <option value="$PROJECT_DIR$/src/main/resources/messages_ru_RU.properties" />
         <option value="$PROJECT_DIR$/src/main/java/by/epam/bikesharing/service/CardLogic.java" />
@@ -256,8 +187,6 @@
         <option value="$PROJECT_DIR$/src/main/webapp/jsp/rents.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/jsp/replenish.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/jsp/profile.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/by/epam/bikesharing/filter/AccessFilter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/epam/bikesharing/filter/ServletSecurityFilter.java" />
         <option value="$PROJECT_DIR$/src/main/java/by/epam/bikesharing/validation/EmailValidation.java" />
         <option value="$PROJECT_DIR$/src/main/java/by/epam/bikesharing/validation/LoginValidation.java" />
         <option value="$PROJECT_DIR$/src/main/java/by/epam/bikesharing/validation/PasswordValidation.java" />
@@ -266,8 +195,12 @@
         <option value="$PROJECT_DIR$/src/main/java/by/epam/bikesharing/command/signup/RegisterCommand.java" />
         <option value="$PROJECT_DIR$/src/main/java/by/epam/bikesharing/dao/UserDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/by/epam/bikesharing/validation/AuthenticatorValidation.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/epam/bikesharing/filter/ControllerAccessFilter.java" />
         <option value="$PROJECT_DIR$/src/main/java/by/epam/bikesharing/command/login/LoginCommand.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/epam/bikesharing/filter/AccessFilter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/epam/bikesharing/filter/ControllerAccessFilter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/epam/bikesharing/filter/EncodingFilter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/epam/bikesharing/filter/ServletSecurityFilter.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -315,118 +248,6 @@
               <item name="Bikesharing" type="b2602c69:ProjectViewProjectNode" />
               <item name="Bikesharing" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Bikesharing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Bikesharing" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Bikesharing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Bikesharing" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Bikesharing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Bikesharing" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="bikesharing" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Bikesharing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Bikesharing" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Bikesharing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Bikesharing" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="Resource Bundle 'messages'" type="a6c14932:ResourceBundleNode" />
-            </path>
-            <path>
-              <item name="Bikesharing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Bikesharing" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="Resource Bundle 'strings'" type="a6c14932:ResourceBundleNode" />
-            </path>
-            <path>
-              <item name="Bikesharing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Bikesharing" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Bikesharing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Bikesharing" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="jsp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Bikesharing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Bikesharing" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="jsp" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Bikesharing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Bikesharing" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="jsp" type="462c0819:PsiDirectoryNode" />
-              <item name="error" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Bikesharing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Bikesharing" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="jsp" type="462c0819:PsiDirectoryNode" />
-              <item name="import" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Bikesharing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Bikesharing" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="META-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Bikesharing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Bikesharing" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Bikesharing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Bikesharing" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="Bikesharing-1.0-SNAPSHOT" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Bikesharing" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Bikesharing" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="Bikesharing-1.0-SNAPSHOT" type="462c0819:PsiDirectoryNode" />
-              <item name="jsp" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -716,7 +537,7 @@
       <workItem from="1576010536545" duration="31477000" />
       <workItem from="1576223424805" duration="1385000" />
       <workItem from="1576327017342" duration="3096000" />
-      <workItem from="1576510759909" duration="47852000" />
+      <workItem from="1576510759909" duration="49941000" />
     </task>
     <task id="LOCAL-00001" summary="Refactoring">
       <created>1576675211961</created>
@@ -732,7 +553,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576704191362</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Updated localization implementation. Added access filter for controller commands.">
+      <created>1576762762893</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1576762762893</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -768,7 +596,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="651450000" />
+    <option name="totallyTimeSpent" value="653539000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -780,7 +608,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1066" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16204691" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -824,19 +653,10 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Refactoring" />
     <MESSAGE value="Major refactoring, bug fixes, new service &amp; validation methods, more or less proper localization." />
-    <option name="LAST_COMMIT_MESSAGE" value="Major refactoring, bug fixes, new service &amp; validation methods, more or less proper localization." />
+    <MESSAGE value="Updated localization implementation. Added access filter for controller commands." />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated localization implementation. Added access filter for controller commands." />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/by/epam/bikesharing/service/LoginLogic.java</url>
-          <line>11</line>
-          <properties />
-          <option name="timeStamp" value="50" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory">
         <watch expression="out" />
@@ -847,216 +667,6 @@
     <SUITE FILE_PATH="coverage/Bikesharing$Tomcat_9_0_21.ic" NAME="Tomcat 9.0.21 Coverage Results" MODIFIED="1576009941029" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/bikesharing/command/login/LogoutCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/bikesharing/command/profile/ProfileCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="18" column="51" lean-forward="true" selection-start-line="18" selection-start-column="51" selection-end-line="18" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/bikesharing/entity/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1152">
-          <caret line="102" column="5" selection-start-line="102" selection-start-column="5" selection-end-line="102" selection-end-column="5" />
-          <folding>
-            <element signature="e#1958#1959#0" expanded="true" />
-            <element signature="e#1987#1988#0" expanded="true" />
-            <element signature="e#2031#2032#0" expanded="true" />
-            <element signature="e#2067#2068#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/bikesharing/constant/ParameterName.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="702">
-          <caret line="39" column="47" selection-start-line="39" selection-start-column="47" selection-end-line="39" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/bikesharing/command/pages/RentsPageCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="21" column="57" lean-forward="true" selection-start-line="21" selection-start-column="57" selection-end-line="21" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/bikesharing/command/profile/LocalizationCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/bikesharing/resource/tttt.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/bikesharing/resource/wetwet.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/import/map_init.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h5#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/import/navbar.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="35" column="167" selection-start-line="35" selection-start-column="167" selection-end-line="35" selection-end-column="167" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/bikesharing/constant/ServiceConstant.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/bikesharing/constant/ParameterValue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="45" selection-start-line="8" selection-start-column="45" selection-end-line="8" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/bikesharing/constant/LocaleConstant.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="38" lean-forward="true" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/bikesharing/command/ActionFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="19" column="129" selection-start-line="19" selection-start-column="129" selection-end-line="19" selection-end-column="129" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/bikesharing/command/balance/AddCardCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="35" column="70" selection-start-line="35" selection-start-column="70" selection-end-line="35" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/bikesharing/command/profile/SaveProfileCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="30" column="70" selection-start-line="30" selection-start-column="70" selection-end-line="30" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/bikesharing/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="48" column="127" selection-start-line="48" selection-start-column="127" selection-end-line="48" selection-end-column="127" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/bikesharing/resource/MessageManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-          <folding>
-            <element signature="e#1031#1032#0" expanded="true" />
-            <element signature="e#1090#1091#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/bikesharing/resource/StringManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
-          <folding>
-            <element signature="e#775#776#0" expanded="true" />
-            <element signature="e#806#807#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/admin/bikes.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-761">
-          <caret line="43" column="51" selection-start-line="43" selection-start-column="38" selection-end-line="43" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/admin/models.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1422">
-          <caret line="79" column="150" selection-start-line="79" selection-start-column="150" selection-end-line="79" selection-end-column="150" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/admin/users.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="32" column="51" selection-start-line="32" selection-start-column="38" selection-end-line="32" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/error/error.jsp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/cards.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="51" column="98" selection-start-line="51" selection-start-column="98" selection-end-line="51" selection-end-column="98" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="14" lean-forward="true" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/main.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="36" column="10" lean-forward="true" selection-start-line="36" selection-start-column="10" selection-end-line="36" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/new_card.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="34" column="8" lean-forward="true" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/rents.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="18" column="84" selection-start-line="18" selection-start-column="84" selection-end-line="18" selection-end-column="84" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/replenish.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
@@ -1084,38 +694,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/bikesharing/filter/ServletSecurityFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="29" column="9" lean-forward="true" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/bikesharing/filter/AccessFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="32" column="9" lean-forward="true" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/bikesharing/filter/EncodingFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="7" column="28" lean-forward="true" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/bikesharing/command/signup/VerifyCommand.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="411">
           <caret line="33" column="72" selection-start-line="33" selection-start-column="72" selection-end-line="33" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/bikesharing/service/ProfileLogic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -1154,24 +736,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/bikesharing/service/email/EmailSender.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="54" column="40" selection-start-line="54" selection-start-column="40" selection-end-line="54" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/bikesharing/command/login/LoginCommand.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="339">
           <caret line="35" column="105" selection-start-line="35" selection-start-column="105" selection-end-line="35" selection-end-column="105" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/bikesharing/service/LoginLogic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
@@ -1203,13 +771,271 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/bikesharing/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="48" column="9" lean-forward="true" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/bikesharing/constant/LocaleConstant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="38" lean-forward="true" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/bikesharing/filter/AccessFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="18" column="43" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
+          <folding>
+            <element signature="e#761#762#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/bikesharing/filter/ControllerAccessFilter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1134">
-          <caret line="63" selection-start-line="63" selection-end-line="63" />
+        <state relative-caret-position="249">
+          <caret line="19" column="43" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#809#810#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/bikesharing/filter/EncodingFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="13" column="43" selection-start-line="13" selection-start-column="43" selection-end-line="13" selection-end-column="43" />
+          <folding>
+            <element signature="e#507#508#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/bikesharing/filter/ServletSecurityFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="16" column="43" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="43" />
+          <folding>
+            <element signature="e#673#674#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/bikesharing/exception/IncorrectPasswordException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/bikesharing/resource/ConfigurationManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/bikesharing/resource/MessageManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding>
+            <element signature="e#1031#1032#0" expanded="true" />
+            <element signature="e#1090#1091#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/bikesharing/resource/StringManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/bikesharing/service/PasswordHash.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="25" column="7" lean-forward="true" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
+          <folding>
+            <element signature="e#815#816#0" expanded="true" />
+            <element signature="e#891#892#0" expanded="true" />
+            <element signature="e#922#923#0" expanded="true" />
+            <element signature="e#992#993#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/bikesharing/service/ProfileLogic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/bikesharing/service/ImageLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/bikesharing/service/LoginLogic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="21" column="1" lean-forward="true" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/bikesharing/service/CardLogic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/bikesharing/service/BikeModelLogic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/bikesharing/service/BikeLogic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/bikesharing/service/BalanceLogic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/bikesharing/service/signup/SignupLogic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/bikesharing/service/rent/RentFinishedTransaction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/bikesharing/service/rent/RentStartedTransaction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/bikesharing/service/pages/UsersPageLogic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/bikesharing/service/pages/UserRentsPageLogic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/bikesharing/service/pages/ProfilePageLogic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/bikesharing/service/pages/PagesLogic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-710">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/bikesharing/service/pages/MainRentPageLogic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/bikesharing/service/pages/BikesPageLogic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/bikesharing/service/email/HTMLDataSource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="17" column="14" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
+          <folding>
+            <element signature="e#319#320#0" expanded="true" />
+            <element signature="e#352#353#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/bikesharing/service/email/VerificationCode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/bikesharing/service/email/EmailSender.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="694">
+          <caret line="54" column="40" selection-start-line="54" selection-start-column="40" selection-end-line="54" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/epam/bikesharing/sqlpool/ConnectionPool.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/cards.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/admin/bikes.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="9" lean-forward="true" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
         </state>
       </provider>
     </entry>

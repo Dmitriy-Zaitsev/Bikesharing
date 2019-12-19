@@ -14,7 +14,7 @@ import java.io.IOException;
 public class ServletSecurityFilter implements Filter {
     private String indexPath;
 
-    public void init(FilterConfig fConfig) throws ServletException {
+    public void init(FilterConfig fConfig) {
         indexPath = fConfig.getInitParameter("INDEX_PATH");
     }
 
