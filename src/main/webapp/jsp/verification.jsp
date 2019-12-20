@@ -10,7 +10,7 @@
         <input type="hidden" name="command" value="verify" />
         <div class="form-group">
             <label for="codeInput">Verification code has been sent to your email.</label>
-            <input name="code" type="text" class="form-control" id="codeInput" placeholder="Enter code">
+            <input name="code" type="text" class="form-control" id="codeInput" placeholder="Enter code" required pattern="[0-9]{6}">
         </div>
         <button type="submit" class="btn btn-primary">Verify</button>
     </form>

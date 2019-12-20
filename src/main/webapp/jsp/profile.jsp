@@ -22,6 +22,7 @@
         height: 24px;
     }
 </style>
+<c:set var = "passwordPattern" value = "^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"/>
 <body>
 <div class="container">
     <br>
@@ -75,7 +76,7 @@
                 <div class="form-group">
                     <label class="col-lg-3 control-label" for="login">${stringManager.get("login", sessionScope.locale)}:</label>
                     <div class="col-lg-8">
-                        <input name="login" id="login" class="form-control" type="text" value="${requestScope.profile_user.login}">
+                        <input name="login" id="login" class="form-control" type="text" value="${requestScope.profile_user.login}" pattern="^[a-z0-9_-]{4,16}$">
                     </div>
                 </div>
                 <div class="form-group">
@@ -87,18 +88,18 @@
                 <div class="form-group">
                     <label class="col-md-3 control-label" for="old_password">${stringManager.get("current_password", sessionScope.locale)}:</label>
                     <div class="col-md-8">
-                        <input class="form-control" id="old_password" name="old_password" type="password" placeholder="Enter current password" autocomplete="new-password">
+                        <input class="form-control" id="old_password" name="old_password" type="password" placeholder="Enter current password" autocomplete="new-password" pattern="${passwordPattern}">
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-md-3 control-label" for="new_password">${stringManager.get("new_password", sessionScope.locale)}:</label>
                     <div class="col-md-8">
-                        <input name="new_password" class="form-control" type="password" placeholder="Enter new password" id="new_password">
+                        <input name="new_password" class="form-control" type="password" placeholder="Enter new password" id="new_password" pattern="${passwordPattern}">
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="col-md-8">
-                        <input name="repeat_password" class="form-control" type="password" placeholder="Confirm password">
+                        <input name="repeat_password" class="form-control" type="password" placeholder="Confirm password" pattern="${passwordPattern}">
                     </div>
                 </div>
                 <div class="form-group">

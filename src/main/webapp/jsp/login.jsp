@@ -10,15 +10,11 @@
         <input type="hidden" name="command" value="login" />
         <div class="form-group">
             <label for="input_login">Login</label>
-            <input name="login" type="text" class="form-control" id="input_login" placeholder="Enter login">
+            <input name="login" type="text" class="form-control" id="input_login" placeholder="Enter login" required pattern="^[a-z0-9_-]{4,16}$">
         </div>
         <div class="form-group">
             <label for="input_password">Password</label>
-            <input name="password" type="password" class="form-control" id="input_password" aria-describedby="passwordHelp" placeholder="Password">
-        </div>
-        <div class="form-group form-check">
-            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-            <label class="form-check-label" for="exampleCheck1">Remember me</label>
+            <input name="password" type="password" class="form-control" id="input_password" aria-describedby="passwordHelp" placeholder="Password" required>
         </div>
         <button type="submit" class="btn btn-primary" style="width: 100%">Log in</button>
         ${errorLoginPassMessage}

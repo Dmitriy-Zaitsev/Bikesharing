@@ -23,10 +23,6 @@
             grid-template-columns: auto auto auto;
             grid-template-rows: auto;
         }
-        .btn-dark {
-            background-color: indianred;
-            border-color:  indianred;
-        }
         form[name="cardForm"] {
             margin: 0;
         }

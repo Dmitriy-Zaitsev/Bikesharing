@@ -13,11 +13,11 @@
         <input type="hidden" name="card_id" value="${requestScope.card_id}" />
         <div class="form-group">
             <label for="inputAmount">${stringManager.get("amount", sessionScope.locale)}</label>
-            <input name="amount" type="text" class="form-control" id="inputAmount" placeholder="Enter amount of money">
+            <input name="amount" type="text" class="form-control" id="inputAmount" placeholder="Enter amount of money" required pattern="^[0-9]+(\.[0-9]{2})?$">
         </div>
         <div class="form-group">
             <label for="inputCvv">CVV</label>
-            <input name="cvv" type="password" class="form-control" id="inputCvv" placeholder="Enter CVV code">
+            <input name="cvv" type="password" class="form-control" id="inputCvv" placeholder="Enter CVV code" required pattern="[0-9]{3,4}">
         </div>
         <button type="submit" class="btn btn-primary">${stringManager.get("submit", sessionScope.locale)}</button>
     </form>
