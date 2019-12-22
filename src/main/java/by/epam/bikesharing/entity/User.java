@@ -5,7 +5,7 @@ import by.epam.bikesharing.service.PasswordHash;
 import java.math.BigDecimal;
 import java.util.StringJoiner;
 
-public class User {
+public class User implements BaseEntity {
     private long id;
     private long bikeId;
     private String email;

@@ -2,7 +2,7 @@ package by.epam.bikesharing.entity;
 
 import java.util.StringJoiner;
 
-public class Spot {
+public class Spot implements BaseEntity {
     private long id;
     private String address;
     private double lat;

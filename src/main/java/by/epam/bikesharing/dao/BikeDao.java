@@ -1,5 +1,6 @@
 package by.epam.bikesharing.dao;
 
+import by.epam.bikesharing.entity.BaseEntity;
 import by.epam.bikesharing.entity.Bike;
 import by.epam.bikesharing.entity.BikeModel;
 
@@ -48,7 +49,7 @@ public class BikeDao extends AbstractDao {
     }
 
     @Override
-    PreparedStatement getCreateStatement(Object entity) throws SQLException {
+    PreparedStatement getCreateStatement(BaseEntity entity) throws SQLException {
         Bike bike = (Bike) entity;
         PreparedStatement statement = getPreparedStatement(INSERT_BIKE);
         statement.setLong(1, bike.getModel().getId());
@@ -58,7 +59,7 @@ public class BikeDao extends AbstractDao {
     }
 
     @Override
-    PreparedStatement getUpdateStatement(Object entity) throws SQLException {
+    PreparedStatement getUpdateStatement(BaseEntity entity) throws SQLException {
         Bike bike = (Bike) entity;
         PreparedStatement statement = getPreparedStatement(UPDATE_BIKE);
         if (bike.getSpotId() == 0) {
@@ -73,7 +74,7 @@ public class BikeDao extends AbstractDao {
     }
 
     @Override
-    Object getEntityFromSet(ResultSet resultSet) throws SQLException {
+    Bike getEntityFromSet(ResultSet resultSet) throws SQLException {
         Bike bike = new Bike();
         bike.setId(resultSet.getLong("BikeID"));
         bike.setUserId(resultSet.getLong("UserID"));

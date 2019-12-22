@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 import java.sql.Timestamp;
 import java.util.StringJoiner;
 
-public class Rent {
+public class Rent implements BaseEntity {
     private long id;
     private long userId;
     private long bikeId;

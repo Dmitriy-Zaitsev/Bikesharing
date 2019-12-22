@@ -1,5 +1,6 @@
 package by.epam.bikesharing.dao;
 
+import by.epam.bikesharing.entity.BaseEntity;
 import by.epam.bikesharing.entity.Card;
 import by.epam.bikesharing.service.PasswordHash;
 
@@ -40,7 +41,7 @@ public class CardDao extends AbstractDao {
     }
 
     @Override
-    PreparedStatement getCreateStatement(Object entity) throws SQLException {
+    PreparedStatement getCreateStatement(BaseEntity entity) throws SQLException {
         Card card = (Card) entity;
         PreparedStatement statement = getPreparedStatement(INSERT_CARD);
         statement.setLong(1, card.getUserId());
@@ -56,7 +57,7 @@ public class CardDao extends AbstractDao {
     }
 
     @Override
-    PreparedStatement getUpdateStatement(Object entity) throws SQLException {
+    PreparedStatement getUpdateStatement(BaseEntity entity) throws SQLException {
         Card card = (Card) entity;
         PreparedStatement statement = getPreparedStatement(UPDATE_CARD);
         statement.setBigDecimal(1, card.getBalance());
@@ -65,7 +66,7 @@ public class CardDao extends AbstractDao {
     }
 
     @Override
-    Object getEntityFromSet(ResultSet resultSet) throws SQLException {
+    Card getEntityFromSet(ResultSet resultSet) throws SQLException {
         Card card = new Card();
         card.setId(resultSet.getLong("CardID"));
         card.setUserId(resultSet.getLong("UserID"));

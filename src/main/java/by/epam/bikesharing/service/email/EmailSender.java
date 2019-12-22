@@ -14,7 +14,7 @@ import javax.mail.internet.MimeMessage;
 import java.util.Properties;
 
 public class EmailSender {
-    private static final Logger LOGGER = LogManager.getLogger("DaoLog");
+    private static final Logger LOGGER = LogManager.getLogger(EmailSender.class);
     private static final String SMTP_SERVER = "smtp.gmail.com";
     private static final String USER_NAME = "deegreazz@gmail.com";
     private static final String PASSWORD = "3110clas";

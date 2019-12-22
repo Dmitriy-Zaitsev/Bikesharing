@@ -26,7 +26,6 @@ public class EntityTransaction {
     public void end() {
         if (connection == null) return;
         try {
-            //check connection for commit
             connection.setAutoCommit(true);
         } catch (SQLException e) {
             //log

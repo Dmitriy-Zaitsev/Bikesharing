@@ -9,12 +9,15 @@ import by.epam.bikesharing.resource.ConfigurationManager;
 import by.epam.bikesharing.resource.MessageManager;
 import by.epam.bikesharing.service.CardLogic;
 import by.epam.bikesharing.service.pages.PagesLogic;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.util.List;
 
 public class AddCardCommand implements ActionCommand {
+    private static final Logger logger = LogManager.getLogger(AddCardCommand.class);
 
     @Override
     public String execute(HttpServletRequest request) {
@@ -32,9 +35,11 @@ public class AddCardCommand implements ActionCommand {
             List<Card> cards = PagesLogic.getUserCards(user.getId());
             request.setAttribute(ParameterName.CARDS, cards);
             page = ConfigurationManager.getProperty("path.page.cards");
+            logger.info("Card was added successfully for user: " + user.toString());
         } else {
             request.setAttribute(ParameterName.MESSAGE, MessageManager.getProperty(addCardResult, user.getLocale()));
             page = ConfigurationManager.getProperty("path.page.add_card");
+            logger.error("Invalid card data was entered or error during updating cards db: " + user.toString());
         }
         return page;
     }

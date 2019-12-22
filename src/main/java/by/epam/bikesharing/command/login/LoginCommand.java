@@ -9,11 +9,14 @@ import by.epam.bikesharing.resource.ConfigurationManager;
 import by.epam.bikesharing.resource.MessageManager;
 import by.epam.bikesharing.service.LoginLogic;
 import by.epam.bikesharing.service.pages.MainRentPageLogic;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 public class LoginCommand implements ActionCommand {
+    private static final Logger logger = LogManager.getLogger(LoginCommand.class);
 
     @Override
     public String execute(HttpServletRequest request) {
@@ -31,14 +34,15 @@ public class LoginCommand implements ActionCommand {
             session.setAttribute(ParameterName.USER, user);
             session.setAttribute(ParameterName.LOCALE, user.getLocale());
             page = new MainRentPageLogic().getUserMainPage(user, request);
+            logger.info(String.format("User %s logged in.", login));
         } catch (IncorrectPasswordException e) {
-            e.printStackTrace();
             request.setAttribute("errorLoginPassMessage", MessageManager.getProperty("message.loginerror"));
             page = ConfigurationManager.getProperty("path.page.login");
+            logger.info(String.format("Invalid password %s for login: %s", password, login));
         } catch (NoSuchUserException e) {
-            e.printStackTrace();
             request.setAttribute("errorLoginPassMessage", MessageManager.getProperty("message.loginerror"));
             page = ConfigurationManager.getProperty("path.page.login");
+            logger.info(String.format("Invalid login %s for password: %s", login, password));
         }
         return page;
     }

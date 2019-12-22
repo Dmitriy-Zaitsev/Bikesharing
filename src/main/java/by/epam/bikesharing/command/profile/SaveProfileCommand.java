@@ -8,11 +8,14 @@ import by.epam.bikesharing.entity.User;
 import by.epam.bikesharing.resource.ConfigurationManager;
 import by.epam.bikesharing.resource.MessageManager;
 import by.epam.bikesharing.service.ProfileLogic;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 public class SaveProfileCommand implements ActionCommand {
+    private static final Logger logger = LogManager.getLogger(SaveProfileCommand.class);
     private static final String OLD_PASSWORD = "old_password";
     private static final String NEW_PASSWORD = "new_password";
     private static final String REPEAT_PASSWORD = "repeat_password";
@@ -27,6 +30,7 @@ public class SaveProfileCommand implements ActionCommand {
         if (ServiceConstant.UPDATE_SUCCESS.equals(message)) {
             user = logic.getNewUser();
             session.setAttribute(ParameterName.USER, user);
+            logger.info(String.format("Profile data was saved for user %s", user));
         } else {
             request.setAttribute(ParameterName.MESSAGE, MessageManager.getProperty(message, (String) session.getAttribute("locale")));
         }

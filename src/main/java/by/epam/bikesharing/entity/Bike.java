@@ -2,7 +2,7 @@ package by.epam.bikesharing.entity;
 
 import java.util.StringJoiner;
 
-public class Bike {
+public class Bike implements BaseEntity {
     private long id;
     private long spotId;
     private long userId;

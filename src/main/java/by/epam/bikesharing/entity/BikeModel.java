@@ -3,7 +3,7 @@ package by.epam.bikesharing.entity;
 import java.math.BigDecimal;
 import java.util.StringJoiner;
 
-public class BikeModel {
+public class BikeModel implements BaseEntity {
     private long id;
     private String name;
     private String imageUrl;

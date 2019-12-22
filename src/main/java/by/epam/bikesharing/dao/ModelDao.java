@@ -1,5 +1,6 @@
 package by.epam.bikesharing.dao;
 
+import by.epam.bikesharing.entity.BaseEntity;
 import by.epam.bikesharing.entity.BikeModel;
 
 import java.sql.PreparedStatement;
@@ -21,7 +22,7 @@ public class ModelDao extends AbstractDao {
     }
 
     @Override
-    public Object findEntityById(long id) {
+    public BaseEntity findEntityById(long id) {
         return null;
     }
 
@@ -36,7 +37,7 @@ public class ModelDao extends AbstractDao {
     }
 
     @Override
-    PreparedStatement getCreateStatement(Object entity) throws SQLException {
+    PreparedStatement getCreateStatement(BaseEntity entity) throws SQLException {
         BikeModel model = (BikeModel) entity;
         PreparedStatement statement = getPreparedStatement(CREATE_MODEL);
         statement.setString(1, model.getName());
@@ -46,7 +47,7 @@ public class ModelDao extends AbstractDao {
     }
 
     @Override
-    PreparedStatement getUpdateStatement(Object entity) throws SQLException {
+    PreparedStatement getUpdateStatement(BaseEntity entity) throws SQLException {
         BikeModel model = (BikeModel) entity;
         PreparedStatement statement = getPreparedStatement(UPDATE_MODEL);
         statement.setBigDecimal(1, model.getCost());

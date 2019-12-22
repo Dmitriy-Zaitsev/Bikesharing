@@ -1,5 +1,6 @@
 package by.epam.bikesharing.dao;
 
+import by.epam.bikesharing.entity.BaseEntity;
 import by.epam.bikesharing.entity.Spot;
 import by.epam.bikesharing.sqlpool.ConnectionPool;
 import by.epam.bikesharing.sqlpool.ProxyConnection;
@@ -48,8 +49,13 @@ public class SpotDao extends AbstractDao {
     }
 
     @Override
-    public Object findEntityById(long id) {
+    public Spot findEntityById(long id) {
         return null;
+    }
+
+    @Override
+    public boolean delete(long id) {
+        return false;
     }
 
     public Spot findSpotByAddress(String address) {
@@ -58,27 +64,17 @@ public class SpotDao extends AbstractDao {
     }
 
     @Override
-    public boolean delete(long id) {
-        return false;
-    }
-
-    @Override
-    public boolean create(Object entity) {
-        return false;
-    }
-
-    @Override
-    PreparedStatement getCreateStatement(Object entity) throws SQLException {
+    PreparedStatement getCreateStatement(BaseEntity entity) throws SQLException {
         return null;
     }
 
     @Override
-    PreparedStatement getUpdateStatement(Object entity) throws SQLException {
+    PreparedStatement getUpdateStatement(BaseEntity entity) throws SQLException {
         return null;
     }
 
     @Override
-    Object getEntityFromSet(ResultSet resultSet) throws SQLException {
+    Spot getEntityFromSet(ResultSet resultSet) throws SQLException {
         Spot spot = new Spot();
         spot.setAddress(resultSet.getString("Address"));
         if (resultSet.getMetaData().getColumnCount() > 1) {
@@ -87,10 +83,5 @@ public class SpotDao extends AbstractDao {
             spot.setLng(resultSet.getDouble("Longitude"));
         }
         return spot;
-    }
-
-    @Override
-    public boolean update(Object entity) {
-        return false;
     }
 }

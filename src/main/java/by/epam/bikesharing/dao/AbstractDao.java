@@ -1,5 +1,6 @@
 package by.epam.bikesharing.dao;
 
+import by.epam.bikesharing.entity.BaseEntity;
 import by.epam.bikesharing.sqlpool.ConnectionPool;
 import by.epam.bikesharing.sqlpool.ProxyConnection;
 import org.apache.logging.log4j.LogManager;
@@ -14,15 +15,15 @@ import java.util.List;
 
 public abstract class AbstractDao<T> {
     static final Logger LOGGER = LogManager.getRootLogger();
-    protected ProxyConnection connection;
+    private ProxyConnection connection;
 
-    public abstract List<T> findAll();
+    public abstract List<? extends BaseEntity> findAll();
 
-    public abstract T findEntityById(long id);
+    public abstract BaseEntity findEntityById(long id);
 
     public abstract boolean delete(long id);
 
-    public boolean create(Object entity) {
+    public boolean create(BaseEntity entity) {
         PreparedStatement statement = null;
         try {
             statement = getCreateStatement(entity);
@@ -35,7 +36,7 @@ public abstract class AbstractDao<T> {
         return false;
     }
 
-    public boolean update(Object entity) {
+    public boolean update(BaseEntity entity) {
         PreparedStatement statement = null;
         try {
             statement = getUpdateStatement(entity);
@@ -59,14 +60,14 @@ public abstract class AbstractDao<T> {
         }
     }
 
-    abstract PreparedStatement getCreateStatement(Object entity) throws SQLException;
+    abstract PreparedStatement getCreateStatement(BaseEntity entity) throws SQLException;
 
-    abstract PreparedStatement getUpdateStatement(Object entity) throws SQLException;
+    abstract PreparedStatement getUpdateStatement(BaseEntity entity) throws SQLException;
 
-    abstract Object getEntityFromSet(ResultSet resultSet) throws SQLException;
+    abstract BaseEntity getEntityFromSet(ResultSet resultSet) throws SQLException;
 
-    List find(String sqlQuery, String ... params) {
-        List<Object> entityList = new ArrayList<>();
+    List<? extends BaseEntity> find(String sqlQuery, String ... params) {
+        List<BaseEntity> entityList = new ArrayList<>();
         PreparedStatement statement = null;
         try {
             statement = getPreparedStatement(sqlQuery);

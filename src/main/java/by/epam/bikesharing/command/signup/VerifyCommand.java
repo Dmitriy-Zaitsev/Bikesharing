@@ -7,11 +7,14 @@ import by.epam.bikesharing.resource.ConfigurationManager;
 import by.epam.bikesharing.resource.MessageManager;
 import by.epam.bikesharing.service.PasswordHash;
 import by.epam.bikesharing.service.signup.SignupLogic;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 public class VerifyCommand implements ActionCommand {
+    private static final Logger logger = LogManager.getLogger(VerifyCommand.class);
 
     @Override
     public String execute(HttpServletRequest request) {
@@ -31,8 +34,9 @@ public class VerifyCommand implements ActionCommand {
                 page = ConfigurationManager.getProperty("path.page.verification");
             }
         } else {
-            request.setAttribute("errorLoginPassMessage", MessageManager.getProperty("message.loginerror", (String) session.getAttribute("locale")));
+            request.setAttribute("errorLoginPassMessage", MessageManager.getProperty("message.loginerror"));
             page = ConfigurationManager.getProperty("path.page.login");
+            logger.error("Session error trying verify user.");
         }
         return page;
     }

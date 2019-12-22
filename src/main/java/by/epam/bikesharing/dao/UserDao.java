@@ -1,5 +1,6 @@
 package by.epam.bikesharing.dao;
 
+import by.epam.bikesharing.entity.BaseEntity;
 import by.epam.bikesharing.entity.User;
 import by.epam.bikesharing.service.PasswordHash;
 
@@ -70,7 +71,7 @@ public class UserDao extends AbstractDao {
     }
 
     @Override
-    PreparedStatement getCreateStatement(Object entity) throws SQLException {
+    PreparedStatement getCreateStatement(BaseEntity entity) throws SQLException {
         User user = (User) entity;
         PreparedStatement statement = getPreparedStatement(INSERT_USER);
         statement.setString(1, user.getEmail());
@@ -83,7 +84,7 @@ public class UserDao extends AbstractDao {
     }
 
     @Override
-    PreparedStatement getUpdateStatement(Object entity) throws SQLException {
+    PreparedStatement getUpdateStatement(BaseEntity entity) throws SQLException {
         User user = (User) entity;
         PreparedStatement statement = getPreparedStatement(UPDATE_USER);
         if (user.getBikeId() == 0)
@@ -102,7 +103,7 @@ public class UserDao extends AbstractDao {
     }
 
     @Override
-    Object getEntityFromSet(ResultSet resultSet) throws SQLException {
+    User getEntityFromSet(ResultSet resultSet) throws SQLException {
         User user = new User();
         user.setId(resultSet.getLong("UserID"));
         user.setBikeId(resultSet.getLong("BikeID"));
